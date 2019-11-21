@@ -3,7 +3,7 @@ using System.Collections.Generic;
 /// <summary>
 /// The order retrieves the relevant information on the customer and 
 /// their delivery details based on their user ID.
-/// - Conor Bailey
+/// - Conor
 /// </summary>
 namespace AgletCoreMVC.Models
 {

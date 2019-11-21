@@ -6,7 +6,7 @@ using System.Collections.Generic;
 /// A customer will be asked to provide their address and 
 /// payment card, whereas a staff member doesn't need to provide this 
 /// information unless they decide to also be a customer.
-/// - Hayden Fowler
+/// - Hayden
 /// </summary>
 namespace AgletCoreMVC.Models
 {

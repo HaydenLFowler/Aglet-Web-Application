@@ -3,6 +3,7 @@ using System;
 /// Hew
 /// </summary>
 public class Staff {
+
 	public string Department;
 	public string Salary;
 	public string JobTitle;

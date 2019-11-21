@@ -5,13 +5,18 @@ using System;
 /// Joe
 /// </summary>
 ///
-public class PaymentCard {
-	public int PaymentCardID;
-	public int CardNumber;
+namespace AgletCoreMVC.Models
+{
+public class PaymentCard 
+{
+	public string PaymentCardID;
+	public int CardNumber { get; set;}
 	public int CustomerID;
-	public int SecurityCode;
-	public string ExpiryDate;
+	public int SecurityCode {get; set;}
+	public string ExpiryDate {get; set;}
 
-	private User customer_needs_payment_card_before_order2;
+	public virtual User UserID;
 
+
+}
 }
