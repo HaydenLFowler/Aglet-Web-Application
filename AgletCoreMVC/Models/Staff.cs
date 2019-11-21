@@ -2,12 +2,15 @@ using System;
 /// <summary>
 /// Hew
 /// </summary>
+namespace AgletCoreMVC.Models
+{
 public class Staff {
 
 	public string Department;
 	public string Salary;
 	public string JobTitle;
 
-	private User staff_has_a_user_ID_for_contact_details;
+	public virtual User UserID {get; set;}
 
 }
+    }

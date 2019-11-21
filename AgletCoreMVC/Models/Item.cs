@@ -2,15 +2,19 @@ using System;
 /// <summary>
 /// Hew
 /// </summary>
+
+namespace AgletCoreMVC.Models
+{
 public class Item {
-	public int ItemID;
-	public int Quantity;
-	public string Price;
-	public string Specifications;
+	public int ItemID {get; set;}
+	public int Quantity {get; set;}
+	public string Price {get; set;}
+	public string Specifications {get; set;}
 
-	private Order item_is_put_into_order;
+	public virtual Order Order {get; set;}
 
-	private Lace lace_describes_item_chosen;
-	private User customer_chooses_item_for_order2;
+	public virtual Lace Lace {get; set;}
+	public virtual User UserID {get; set;}
 
 }
+    }
