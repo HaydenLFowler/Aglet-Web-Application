@@ -5,13 +5,19 @@ using System;
 /// This option will be based on the IsCustomer attribute.
 /// - Hayden
 /// </summary>
-public class Address {
-	public int AddressID;
-	public string StreetAddress;
-	public string Region;
-	public string Country;
-	public string PostCode;
 
-	private User customer_needs_address_for_order2;
+namespace AgletCoreMVC.Models
+{
+    public class Address
+    {
 
+        public int AddressID { get; set; }
+        public string StreetAddress { get; set; }
+        public string Region { get; set; }
+        public string Country { get; set; }
+        public string PostCode { get; set; }
+
+        public User UserID { get; set; }
+
+    }
 }

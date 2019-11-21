@@ -1,13 +1,19 @@
 using System;
 
 /// <summary>
-/// Joe Champion
+/// Joe
 /// </summary>
-public class Contact {
+/// namespace AgletCoreMVC.Models
+namespace AgletCoreMVC.Models
+{
+public class Contact
+{
 	public int ContactID;
-	public string Email;
-	public string Phone;
+	public string Email {get;set;}
+	public string Phone {get; set;}
 
-	private User user_has_contact_details2;
+	public virtual User UserID;
 
+
+}
 }

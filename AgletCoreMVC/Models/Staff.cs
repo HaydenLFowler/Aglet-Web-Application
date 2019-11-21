@@ -5,6 +5,7 @@ using System;
 namespace AgletCoreMVC.Models
 {
 public class Staff {
+
 	public string Department;
 	public string Salary;
 	public string JobTitle;
