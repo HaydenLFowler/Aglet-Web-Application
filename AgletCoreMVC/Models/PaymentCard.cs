@@ -8,15 +8,15 @@ using System;
 namespace AgletCoreMVC.Models
 {
 public class PaymentCard 
-{
-	public string PaymentCardID;
+    {
+	public string PaymentCardID { get; set; }
 	public int CardNumber { get; set;}
 	public int CustomerID;
 	public int SecurityCode {get; set;}
 	public string ExpiryDate {get; set;}
 
-	public User UserID;
+	public virtual User UserID { get; set; }
 
 
-}
+    }
 }

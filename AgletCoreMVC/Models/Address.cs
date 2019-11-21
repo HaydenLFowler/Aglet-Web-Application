@@ -17,7 +17,7 @@ namespace AgletCoreMVC.Models
         public string Country { get; set; }
         public string PostCode { get; set; }
 
-        public User UserID { get; set; }
+        public virtual User UserID { get; set; }
 
     }
 }

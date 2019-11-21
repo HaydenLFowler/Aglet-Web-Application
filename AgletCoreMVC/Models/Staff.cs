@@ -4,7 +4,8 @@ using System;
 /// </summary>
 namespace AgletCoreMVC.Models
 {
-public class Staff {
+public class Staff
+    {
 
 	public string Department;
 	public string Salary;
@@ -12,5 +13,5 @@ public class Staff {
 
 	public virtual User UserID {get; set;}
 
-}
     }
+}
