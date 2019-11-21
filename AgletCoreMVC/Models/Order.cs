@@ -1,16 +1,21 @@
 using System;
+using System.Collections.Generic;
 /// <summary>
 /// The order retrieves the relevant information on the customer and 
 /// their delivery details based on their user ID.
 /// - Conor
 /// </summary>
-public class Order {
-	public int OrderID;
-	public string Date;
-	public string Status;
-	public string SubTotal;
+namespace AgletCoreMVC.Models
+{
+    public class Order
+    {
+        public int OrderID { get; set; }
+        public string Date { get; set; }
+        public string Status { get; set; }
+        public string SubTotal { get; set; }
 
-	private Item[] item_is_put_into_order2;
-	private User customer_places_order2;
+        public virtual ICollection<Item> Item {get; set;}
+        public virtual User UserID { get; set; }
 
+    }
 }
