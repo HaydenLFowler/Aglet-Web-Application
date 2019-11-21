@@ -15,7 +15,7 @@ public class PaymentCard
 	public int SecurityCode {get; set;}
 	public string ExpiryDate {get; set;}
 
-	public virtual User UserID;
+	public User UserID;
 
 
 }
