@@ -2,7 +2,7 @@ using System;
 /// <summary>
 /// The order retrieves the relevant information on the customer and 
 /// their delivery details based on their user ID.
-/// - Conor Bailey
+/// - Conor
 /// </summary>
 public class Order {
 	public int OrderID;

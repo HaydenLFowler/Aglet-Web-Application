@@ -1,7 +1,7 @@
 using System;
 
 /// <summary>
-/// Joe Champion
+/// Joe
 /// </summary>
 /// namespace AgletCoreMVC.Models
 namespace AgletCoreMVC.Models
