@@ -1,7 +1,7 @@
 using System;
 
 /// <summary>
-/// Joe Champion
+/// Joe
 /// </summary>
 public class Contact {
 	public int ContactID;
