@@ -14,6 +14,8 @@ namespace AgletCoreMVC.Models
         public string Status { get; set; }
         public string SubTotal { get; set; }
 
+
+            // Navigation
         public virtual ICollection<Item> Item {get; set;}
         public virtual User UserID { get; set; }
 

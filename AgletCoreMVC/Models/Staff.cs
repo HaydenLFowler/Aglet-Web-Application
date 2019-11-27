@@ -11,6 +11,7 @@ public class Staff
 	public string Salary;
 	public string JobTitle;
 
+        // Navigation
 	public virtual User UserID {get; set;}
 
     }

@@ -13,10 +13,19 @@ namespace AgletCoreMVC.Models
     public class User
     {
         public int UserID { get; set; }
+
+        [Required]
         public string FirstName { get; set; }
+
+        [Required]
         public string Surname { get; set; }
+
+        [Required]
         public Boolean IsStaff { get; set; }
+
+        [Required]
         public Boolean IsCustomer { get; set; }
+
 
         //  Navigation Properties (relationships)
 

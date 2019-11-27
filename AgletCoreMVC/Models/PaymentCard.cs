@@ -10,17 +10,22 @@ namespace AgletCoreMVC.Models
 {
 public class PaymentCard 
     {
+
 	public string PaymentCardID { get; set; }
 
     [Required]
 	public int CardNumber { get; set;}
 
+    
 	public int CustomerID;
+
+   
 	public int SecurityCode {get; set;}
+
+    
 	public string ExpiryDate {get; set;}
 
         // Navigation
-
 	public virtual User UserID { get; set; }
 
 

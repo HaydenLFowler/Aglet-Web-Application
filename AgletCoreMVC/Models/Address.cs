@@ -12,11 +12,20 @@ namespace AgletCoreMVC.Models
     {
 
         public int AddressID { get; set; }
+
+        [Required]
         public string StreetAddress { get; set; }
+
+        [Required]
         public string Region { get; set; }
+
+        [Required]
         public string Country { get; set; }
+
+        [Required]
         public string PostCode { get; set; }
 
+            // Navigation
         public virtual User UserID { get; set; }
 
     }

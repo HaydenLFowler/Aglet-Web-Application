@@ -16,6 +16,8 @@ namespace AgletCoreMVC.Models
         public string Image { get; set; }
         public string Description { get; set; }
 
+
+            // Navigation
         public virtual ICollection<Item> Item { get; set; }
     }
 }

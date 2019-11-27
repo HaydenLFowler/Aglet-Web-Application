@@ -11,8 +11,8 @@ public class Item {
 	public string Price {get; set;}
 	public string Specifications {get; set;}
 
+        // Navigation
 	public virtual Order Order {get; set;}
-
 	public virtual Lace Lace {get; set;}
 	public virtual User UserID {get; set;}
 
