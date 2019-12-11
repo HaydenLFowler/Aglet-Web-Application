@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 /// <summary>
 /// Depending on whether or not the user is a customer or 
 /// staff, the information they are prompted to supply will vary. 
@@ -15,9 +16,12 @@ namespace AgletCoreMVC.Models
         public int UserID { get; set; }
 
         [Required]
+        [StringLength(20, ErrorMessage = "First Name cannot be empty or exceed 20 characters.")]
+        [Display(Name = "First Name")]       
         public string FirstName { get; set; }
 
         [Required]
+        [StringLength(40, ErrorMessage = "Surname cannot be empty or exceed 40 characters.")]
         public string Surname { get; set; }
 
         [Required]
