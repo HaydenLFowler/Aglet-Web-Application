@@ -9,7 +9,7 @@ namespace AgletCoreMVC.Models
 {
 public class Contact
 {
-	public int ContactID;
+	public int ContactID { get; set; }
 
     [DataType(DataType.EmailAddress), StringLength(100)]
     public string Email {get;set; }
@@ -17,9 +17,10 @@ public class Contact
    [Required, StringLength(20)]
     public string Phone {get; set;}
 
+    public int UserID { get; set; }
 
         // Navigation
-	//public virtual User UserID { get; set; }
+	public virtual User User { get; set; }
 
 
 }

@@ -33,6 +33,9 @@ namespace AgletCoreMVC.Models
         [Required]
         public Boolean IsCustomer { get; set; }
 
+        public Nullable<int> StaffID { get; set; }
+
+        public Nullable<int> CustomerID { get; set; }
 
         //  Navigation Properties (relationships)
 

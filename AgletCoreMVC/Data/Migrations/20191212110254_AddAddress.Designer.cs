@@ -4,14 +4,16 @@ using AgletCoreMVC.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace AgletCoreMVC.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20191212110254_AddAddress")]
+    partial class AddAddress
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -41,173 +43,6 @@ namespace AgletCoreMVC.Data.Migrations
                     b.HasKey("AddressID");
 
                     b.ToTable("Address");
-                });
-
-            modelBuilder.Entity("AgletCoreMVC.Models.Contact", b =>
-                {
-                    b.Property<int>("ContactID")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("Email")
-                        .HasMaxLength(100);
-
-                    b.Property<string>("Phone")
-                        .IsRequired()
-                        .HasMaxLength(20);
-
-                    b.Property<int>("UserID");
-
-                    b.HasKey("ContactID");
-
-                    b.HasIndex("UserID")
-                        .IsUnique();
-
-                    b.ToTable("Contact");
-                });
-
-            modelBuilder.Entity("AgletCoreMVC.Models.Item", b =>
-                {
-                    b.Property<int>("ItemID")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<int>("LaceID");
-
-                    b.Property<int>("OrderID");
-
-                    b.Property<decimal>("Price");
-
-                    b.Property<int>("Quantity");
-
-                    b.HasKey("ItemID");
-
-                    b.HasIndex("LaceID");
-
-                    b.HasIndex("OrderID");
-
-                    b.ToTable("Item");
-                });
-
-            modelBuilder.Entity("AgletCoreMVC.Models.Lace", b =>
-                {
-                    b.Property<int>("LaceID")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<int>("Brand");
-
-                    b.Property<int>("Colour");
-
-                    b.Property<string>("Description");
-
-                    b.Property<string>("ImageURL");
-
-                    b.Property<int>("Length");
-
-                    b.Property<string>("Print");
-
-                    b.HasKey("LaceID");
-
-                    b.ToTable("Lace");
-                });
-
-            modelBuilder.Entity("AgletCoreMVC.Models.Order", b =>
-                {
-                    b.Property<int>("OrderID")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<DateTime>("Date");
-
-                    b.Property<int>("Status");
-
-                    b.Property<string>("SubTotal");
-
-                    b.Property<int?>("UserID1");
-
-                    b.HasKey("OrderID");
-
-                    b.HasIndex("UserID1");
-
-                    b.ToTable("Order");
-                });
-
-            modelBuilder.Entity("AgletCoreMVC.Models.PaymentCard", b =>
-                {
-                    b.Property<string>("PaymentCardID")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<string>("CardName")
-                        .IsRequired()
-                        .HasMaxLength(30);
-
-                    b.Property<string>("CardNumber")
-                        .IsRequired()
-                        .HasMaxLength(30);
-
-                    b.Property<int>("ExpiryMonth");
-
-                    b.Property<int>("ExpiryYear");
-
-                    b.Property<int>("SecurityCode");
-
-                    b.HasKey("PaymentCardID");
-
-                    b.ToTable("PaymentCard");
-                });
-
-            modelBuilder.Entity("AgletCoreMVC.Models.Staff", b =>
-                {
-                    b.Property<int>("StaffID")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.HasKey("StaffID");
-
-                    b.ToTable("Staff");
-                });
-
-            modelBuilder.Entity("AgletCoreMVC.Models.User", b =>
-                {
-                    b.Property<int>("UserID")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<int?>("AddressID");
-
-                    b.Property<int?>("CustomerID");
-
-                    b.Property<string>("FirstName")
-                        .IsRequired()
-                        .HasMaxLength(20);
-
-                    b.Property<bool>("IsCustomer");
-
-                    b.Property<bool>("IsStaff");
-
-                    b.Property<string>("MicrosoftID")
-                        .HasMaxLength(50);
-
-                    b.Property<string>("PaymentCardID");
-
-                    b.Property<int?>("StaffID");
-
-                    b.Property<string>("Surname")
-                        .IsRequired()
-                        .HasMaxLength(20);
-
-                    b.HasKey("UserID");
-
-                    b.HasIndex("AddressID");
-
-                    b.HasIndex("PaymentCardID");
-
-                    b.HasIndex("StaffID")
-                        .IsUnique()
-                        .HasFilter("[StaffID] IS NOT NULL");
-
-                    b.ToTable("User");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -373,49 +208,6 @@ namespace AgletCoreMVC.Data.Migrations
                     b.HasKey("UserId", "LoginProvider", "Name");
 
                     b.ToTable("AspNetUserTokens");
-                });
-
-            modelBuilder.Entity("AgletCoreMVC.Models.Contact", b =>
-                {
-                    b.HasOne("AgletCoreMVC.Models.User", "User")
-                        .WithOne("Contact")
-                        .HasForeignKey("AgletCoreMVC.Models.Contact", "UserID")
-                        .OnDelete(DeleteBehavior.Cascade);
-                });
-
-            modelBuilder.Entity("AgletCoreMVC.Models.Item", b =>
-                {
-                    b.HasOne("AgletCoreMVC.Models.Lace", "Lace")
-                        .WithMany()
-                        .HasForeignKey("LaceID")
-                        .OnDelete(DeleteBehavior.Cascade);
-
-                    b.HasOne("AgletCoreMVC.Models.Order", "Order")
-                        .WithMany("Item")
-                        .HasForeignKey("OrderID")
-                        .OnDelete(DeleteBehavior.Cascade);
-                });
-
-            modelBuilder.Entity("AgletCoreMVC.Models.Order", b =>
-                {
-                    b.HasOne("AgletCoreMVC.Models.User", "UserID")
-                        .WithMany("Orders")
-                        .HasForeignKey("UserID1");
-                });
-
-            modelBuilder.Entity("AgletCoreMVC.Models.User", b =>
-                {
-                    b.HasOne("AgletCoreMVC.Models.Address", "Address")
-                        .WithMany()
-                        .HasForeignKey("AddressID");
-
-                    b.HasOne("AgletCoreMVC.Models.PaymentCard", "PaymentCard")
-                        .WithMany()
-                        .HasForeignKey("PaymentCardID");
-
-                    b.HasOne("AgletCoreMVC.Models.Staff", "Staff")
-                        .WithOne("UserID")
-                        .HasForeignKey("AgletCoreMVC.Models.User", "StaffID");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

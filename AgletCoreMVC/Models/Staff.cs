@@ -4,15 +4,29 @@ using System;
 /// </summary>
 namespace AgletCoreMVC.Models
 {
-public class Staff
+    public class Staff
     {
+        public int StaffID { get; set; }
 
-	public string Department;
-	public string Salary;
-	public string JobTitle;
+        public Departments Department;
+
+        public decimal Salary;
+
+        public JobTitles JobTitle;
 
         // Navigation
-	public virtual User UserID {get; set;}
+	    public virtual User UserID {get; set;}
 
+        public enum Departments
+        {
+            HQ,
+            HR
+        }
+
+        public enum JobTitles
+        {
+            Supervisor,
+            Manager
+        }
     }
 }

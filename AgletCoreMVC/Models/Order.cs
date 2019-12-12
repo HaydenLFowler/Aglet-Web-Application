@@ -11,7 +11,7 @@ namespace AgletCoreMVC.Models
     {
         public int OrderID { get; set; }
 
-        public string Date { get; set; }
+        public DateTime Date { get; set; }
 
         public OrderStatus Status { get; set; }
 
