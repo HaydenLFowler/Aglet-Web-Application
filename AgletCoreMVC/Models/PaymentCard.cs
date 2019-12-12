@@ -1,4 +1,5 @@
 using System;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 /// <summary>
 /// When placing an order the user must provide payment information,
@@ -13,20 +14,30 @@ public class PaymentCard
 
 	public string PaymentCardID { get; set; }
 
+    // Customers name
     [Required]
-	public int CardNumber { get; set;}
+    [StringLength(30, ErrorMessage = "Errror"), DisplayName("Card Numnber")]
+    public string CardName { get; set; }
+
+    [Required]
+    [StringLength(30, ErrorMessage = "Errror"), DisplayName("Card Numnber")]
+    public string CardNumber { get; set;}
 
     
-	public int CustomerID;
+	//public int CustomerID;
 
    
 	public int SecurityCode {get; set;}
 
     
-	public string ExpiryDate {get; set;}
+    [Required, Range(1,12)]
+	public int ExpiryMonth {get; set;}
+
+    [Required, Range(2019, 2029)]
+    public int ExpiryYear { get; set; }
 
         // Navigation
-	public virtual User UserID { get; set; }
+        //public virtual User UserID { get; set; }
 
 
     }

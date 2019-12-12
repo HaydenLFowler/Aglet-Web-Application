@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 /// <summary>
 /// Conor
 /// </summary>
@@ -14,6 +15,8 @@ namespace AgletCoreMVC.Models
         public string Brand { get; set; }
         public double Length { get; set; }
         public string Image { get; set; }
+
+        [DataType(DataType.MultilineText)]
         public string Description { get; set; }
 
 

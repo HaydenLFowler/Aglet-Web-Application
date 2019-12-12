@@ -15,13 +15,16 @@ namespace AgletCoreMVC.Models
     {
         public int UserID { get; set; }
 
+        [StringLength(50)]
+        public string MicrosoftID { get; set; }
+
         [Required]
         [StringLength(20, ErrorMessage = "First Name cannot be empty or exceed 20 characters.")]
         [Display(Name = "First Name")]       
         public string FirstName { get; set; }
 
         [Required]
-        [StringLength(40, ErrorMessage = "Surname cannot be empty or exceed 40 characters.")]
+        [StringLength(20, ErrorMessage = "Surname cannot be empty or exceed 20 characters.")]
         public string Surname { get; set; }
 
         [Required]
@@ -34,12 +37,22 @@ namespace AgletCoreMVC.Models
         //  Navigation Properties (relationships)
 
         public virtual Contact Contact { get; set; }
+
         public virtual PaymentCard PaymentCard { get; set; }
 
         public virtual ICollection<Order> Orders { get; set; }
 
         public virtual Staff Staff { get; set; }
+
         public virtual Address Address { get; set; }
+
+
+        public User()
+        {
+            IsCustomer = true;
+            IsStaff = false;
+        }
+
 
     }
 }
