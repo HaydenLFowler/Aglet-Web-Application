@@ -1,4 +1,6 @@
 using System;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel;
 /// <summary>
 /// Hew
 /// </summary>
@@ -6,15 +8,24 @@ using System;
 namespace AgletCoreMVC.Models
 {
 public class Item {
+
+
 	public int ItemID {get; set;}
+
+    [Display(Name = "Quantity"), ]
 	public int Quantity {get; set;}
-	public string Price {get; set;}
-	public string Specifications {get; set;}
+
+    [Required]// curren y annotations
+    [Display(Name = "Price")]
+	public decimal Price {get; set;}
+
+    public int LaceID { get; set; }
+
+    public int OrderID { get; set; }
 
         // Navigation
 	public virtual Order Order {get; set;}
 	public virtual Lace Lace {get; set;}
-	public virtual User UserID {get; set;}
 
 }
     }
