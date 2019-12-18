@@ -20,9 +20,9 @@ namespace AgletCoreMVC.Models
         public string StreetAddress { get; set; }
 
         [Required]
-        [StringLength(30, ErrorMessage = "Street Address must be filled in.")]
+        [StringLength(30, ErrorMessage = "Town must be filled in.")]
         public string Town { get; set; }
-
+        [Required (ErrorMessage = "Can not be left blank.")]
         public Countries Country { get; set; }
 
         [Required]
@@ -41,6 +41,9 @@ namespace AgletCoreMVC.Models
         GB,
         US,
         IT,
-        FR
+        FR,
+        CN,
+        DE,
+
     }
 }
