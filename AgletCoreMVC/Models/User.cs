@@ -37,6 +37,10 @@ namespace AgletCoreMVC.Models
 
         public Nullable<int> CustomerID { get; set; }
 
+        public int AdressID { get; set; }
+
+        public int ContactID { get; set; }
+
         //  Navigation Properties (relationships)
 
         public virtual Contact Contact { get; set; }

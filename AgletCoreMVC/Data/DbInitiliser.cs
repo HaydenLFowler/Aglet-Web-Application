@@ -10,9 +10,28 @@ namespace AgletCoreMVC.Data
     {
         public static void Initialise (ApplicationDbContext context)
         {
-            //InitialiseAddresses(context);
+            InitialiseAddresses(context);
+            IntialisePaymentCards(context);
+
+            //IntialiseContacts(context);
+            //InitliaseStaff(context);
             //InitialiseUsers(context);
             
+        }
+
+        private static void InitliaseStaff(ApplicationDbContext context)
+        {
+            throw new NotImplementedException();
+        }
+
+        private static void IntialiseContacts(ApplicationDbContext context)
+        {
+            throw new NotImplementedException();
+        }
+
+        private static void IntialisePaymentCards(ApplicationDbContext context)
+        {
+            throw new NotImplementedException();
         }
 
         //User seed data done by Hayden
