@@ -157,6 +157,8 @@ namespace AgletCoreMVC.Data
 
             context.SaveChanges();
         }
+
+        //Seed data by Conor
         private static void InitialiseOrders(ApplicationDbContext context)
         {
             if (context.Order.Any())
@@ -177,6 +179,8 @@ namespace AgletCoreMVC.Data
 
             context.SaveChanges();
         }
+
+        //Seed data by Conor
         private static void InitialiseLaces(ApplicationDbContext context)
         {
             if (context.Lace.Any())
@@ -185,9 +189,9 @@ namespace AgletCoreMVC.Data
             }
             var laces = new Lace[]
             {
-                new Lace {Colour = "Blue", Print = "Blue Lace", Brand = "Nike",Length = "10", ImageURL = "Image.com", Description = "One of the best"},
-                new Lace {Colour = "Grey", Brand = "UnderArmour", Length = "20", ImageURL = "Image2.com"},
-                new Lace {Colour = "Pink", Brand = "Adidas", Length = "10", ImageURL = "Image3.co.uk", Description = "A great lace"}
+                new Lace {Colour = Colours.Black, Print = "Blue Lace", Brand = Brands.Nike, Length = 10, ImageURL = "Image.com", Description = "One of the best"},
+                new Lace {Colour = Colours.Green, Brand = Brands.UnderArmour, Length = 20, ImageURL = "Image2.com"},
+                new Lace {Colour = Colours.Pink, Brand = Brands.Adidas, Length = 10, ImageURL = "Image3.co.uk", Description = "A great lace"}
             };
 
             foreach (Lace a in laces)

@@ -16,7 +16,7 @@ namespace AgletCoreMVC.Models
 
         // The users text for printing on the lace
         [StringLength(15, ErrorMessage = "Your print can't exceed 15 characters")]
-        public Nullable<string> Print { get; set; }
+        public string Print { get; set; }
 
         [Required]
         public Brands Brand { get; set; }
@@ -29,7 +29,7 @@ namespace AgletCoreMVC.Models
         public string ImageURL { get; set; }
 
         [DataType(DataType.MultilineText)]
-        public Nullable<string> Description { get; set; }
+        public string Description { get; set; }
 
         // Navigation
         //public virtual ICollection<Item> Item { get; set; }
