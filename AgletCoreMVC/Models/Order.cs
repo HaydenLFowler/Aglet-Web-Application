@@ -17,7 +17,8 @@ namespace AgletCoreMVC.Models
 
         [Required]
         public OrderStatus Status { get; set; }
-        
+
+        [Range(0, 9999999.99)]
         public string SubTotal { get; set; }
 
         // Navigation

@@ -20,25 +20,24 @@ public class PaymentCard
     public string CardName { get; set; }
 
     [Required]
-    [StringLength(30, ErrorMessage = "Please Enter a valid Card number"), DisplayName("Card Numnber")]
-    public string CardNumber { get; set;}
+    [StringLength(16, ErrorMessage = "Please Enter a valid Card number"), DisplayName("Card Numnber")]
+    public long CardNumber { get; set;}
 
     
 	//public int CustomerID;
 
    [Required, Range(200,900)]
-   [StringLength(30, ErrorMessage = "Please Enter a valid Card number"), DisplayName("Card Numnber")]
-        public int SecurityCode {get; set;}
+   [StringLength(3, ErrorMessage = "Please Enter a valid Card number"), DisplayName("Card Numnber")]
+     public int SecurityCode {get; set;}
 
     
     [Required, Range(1,12)]
-        [StringLength(30, ErrorMessage = "Please Enter a valid Card number"), DisplayName("Card Numnber")]
-        public int ExpiryMonth {get; set;}
+    [StringLength(2, ErrorMessage = "Please Enter a valid Card number"), DisplayName("Card Numnber")]
+    public int ExpiryMonth {get; set;}
 
     [Required, Range(2019, 2029)]
-        [StringLength(30, ErrorMessage = "Please Enter a valid Card number"), DisplayName("Card Numnber")]
-
-        public int ExpiryYear { get; set; }
+    [StringLength(4, ErrorMessage = "Please Enter a valid Card number"), DisplayName("Card Numnber")]
+    public int ExpiryYear { get; set; }
 
         // Navigation
         //public virtual User UserID { get; set; }

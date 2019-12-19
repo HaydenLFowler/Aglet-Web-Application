@@ -11,10 +11,10 @@ namespace AgletCoreMVC.Data
         public static void Initialise (ApplicationDbContext context)
         {
             InitialiseAddresses(context);
-            IntialisePaymentCards(context);
+            InitialisePaymentCards(context);
 
-            //IntialiseContacts(context);
-            //InitliaseStaff(context);
+            InitialiseContacts(context);
+            InitialiseStaff(context);
             //InitialiseUsers(context);
             //InitialiseLaces(context);
             //InitialiseOrders(context);
@@ -22,20 +22,6 @@ namespace AgletCoreMVC.Data
 
         }
 
-        private static void InitliaseStaff(ApplicationDbContext context)
-        {
-            throw new NotImplementedException();
-        }
-
-        private static void IntialiseContacts(ApplicationDbContext context)
-        {
-            throw new NotImplementedException();
-        }
-
-        private static void IntialisePaymentCards(ApplicationDbContext context)
-        {
-            throw new NotImplementedException();
-        }
 
         //User seed data done by Hayden
         private static void InitialiseUsers(ApplicationDbContext context)
@@ -224,5 +210,75 @@ namespace AgletCoreMVC.Data
 
              context.SaveChanges();
          }*/
+
+        private static void InitialiseContacts(ApplicationDbContext context)
+        {
+            if (context.Contact.Any())
+            {
+                return;
+            }
+
+            var contacts = new Contact[]
+            {
+                new Contact {Email = "TheRightfulcustomer@gmail.com", Phone = "07885979893"},
+                new Contact {Email = "TheHumorouscustomer@gmail.com", Phone = "07700 900347"},
+                new Contact {Email = "TheCutcustomer@gmail.com", Phone = "07700 900295"},
+                new Contact {Email = "TheDisgustingcustomer@gmail.com", Phone = "07700 900005"},
+                new Contact {Email = "Customer1@gmail.com", Phone = "07700900485"},
+                new Contact {Email = "Customer2@gmail.com", Phone = "07700900029"},
+                new Contact {Email = "Customer3@gmail.com", Phone = "07700900249"},
+                new Contact {Email = "Customer4@gmail.com", Phone = "07811270000"},
+                new Contact {Email = "Customer5@gmail.com", Phone = "07867290000"},
+                new Contact {Email = "Customer6@gmail.com", Phone = "07896740000"},
+                new Contact {Email = "Customer7@gmail.com", Phone = "070 4951 9971 "},
+                new Contact {Email = "Customer8@gmail.com", Phone = "079 1810 3448 "},
+                new Contact {Email = "Customer9@gmail.com", Phone = "077 2052 4101 "},
+                new Contact {Email = "Customer11@gmail.com", Phone = "070 3021 6070 "},
+                new Contact {Email = "Customer12@gmail.com", Phone = "077 1212 9738"},
+                new Contact {Email = "Customer13@gmail.com", Phone = "070 0126 3673 "},
+                new Contact {Email = "Customer14@gmail.com", Phone = "077 3790 8103"},
+                new Contact {Email = "Customer15@gmail.com", Phone = "078 5441 8459 "},
+                new Contact {Email = "Customer16@gmail.com", Phone = "078 8654 5833 "},
+                new Contact {Email = "Customer17@gmail.com", Phone = "079 7677 7169 "},
+                new Contact {Email = "Customer18@gmail.com", Phone = "077 7740 9515"},
+                new Contact {Email = "Customer19@gmail.com", Phone = "079 7539 5614 "},
+                new Contact {Email = "Customer20@gmail.com", Phone = "077 2463 0714"},
+                new Contact {Email = "Customer21@gmail.com", Phone = "070 8272 4859"},
+                new Contact {Email = "Customer22@gmail.com", Phone = "079 0661 9496"},
+                new Contact {Email = "Customer23@gmail.com", Phone = "079 7880 0056"}
+            };
+
+            foreach (Contact a in contacts)
+            {
+                context.Contact.Add(a);
+            }
+
+            context.SaveChanges();
+        }
+
+        private static void InitialisePaymentCards(ApplicationDbContext context)
+        {
+            if (context.PaymentCard.Any())
+            {
+                return;
+            }
+
+            var paymentcards = new PaymentCard[]
+            {
+                new PaymentCard{ CardName = "Leon", CardNumber = 8753271626384597, ExpiryMonth = 12, ExpiryYear = 2023, SecurityCode = 546},
+                new PaymentCard{ CardName = "Tracey", CardNumber = 2635172834927261, ExpiryMonth = 1, ExpiryYear = 2025, SecurityCode = 963},
+                new PaymentCard{ CardName = "Bruce", CardNumber = 5627265142899283, ExpiryMonth = 2, ExpiryYear = 2028, SecurityCode = 240},
+                new PaymentCard{ CardName = "Frank", CardNumber = 61782531, ExpiryMonth = 11, ExpiryYear = 2020, SecurityCode = 663},
+                new PaymentCard{ CardName = "Zack", CardNumber = 24453311, ExpiryMonth = 7, ExpiryYear = 2023, SecurityCode = 922},
+                new PaymentCard{ CardName = "Owen", CardNumber = 59182712, ExpiryMonth = 4, ExpiryYear = 2025, SecurityCode = 248},
+            };
+
+            foreach (PaymentCard a in paymentcards)
+            {
+                context.PaymentCard.Add(a);
+            }
+
+            context.SaveChanges();
+        }
     }
 }
