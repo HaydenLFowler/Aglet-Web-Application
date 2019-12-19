@@ -16,7 +16,10 @@ namespace AgletCoreMVC.Data
             //IntialiseContacts(context);
             //InitliaseStaff(context);
             //InitialiseUsers(context);
-            
+            //InitialiseLaces(context);
+            //InitialiseOrders(context);
+
+
         }
 
         private static void InitliaseStaff(ApplicationDbContext context)
@@ -113,7 +116,12 @@ namespace AgletCoreMVC.Data
                 new Address {StreetAddress = "47  Haslemere Road", Town = "ECKFORD", Country = Countries.DE, PostCode = "TD5 8BE"},
                 new Address {StreetAddress = "93  Winchester Rd", Town = "METFIELD", Country = Countries.IT, PostCode = "IP20 2UW"},
                 new Address {StreetAddress = "70  Coast Rd", Town = "KIRKLEVINGTON", Country = Countries.US, PostCode = "TS15 0LN"},
-                new Address {StreetAddress = "133  Lamphey Road", Town = "THE MYTHE", Country = Countries.GB, PostCode = "GL20 3JY"}
+                new Address {StreetAddress = "13  Lamphey Road", Town = "THE MYTHE", Country = Countries.GB, PostCode = "GL20 3JY"},
+                new Address {StreetAddress = "19  Lamp Road", Town = "MYTHE", Country = Countries.GB, PostCode = "GL2 4HG"},
+                new Address {StreetAddress = "92  Traill Street", Town = "ROSEMOUNT", Country = Countries.GB, PostCode = "HP9 1AP"},
+                new Address {StreetAddress = "56  Scrimshire Lane", Town = "ASTON", Country = Countries.GB, PostCode = "AR3 5JG"},
+                new Address {StreetAddress = "75  Witney Way", Town = "KIRKTOWN OF DESKFORD", Country = Countries.GB, PostCode = "GL12 7RF"},
+                new Address {StreetAddress = "26  Thames Street", Town = "BONCHESTER BRIDGE", Country = Countries.GB, PostCode = "AH11 2AK"}
             };
 
             foreach (Address a in addresses)
@@ -123,5 +131,98 @@ namespace AgletCoreMVC.Data
 
             context.SaveChanges();
         }
+
+        private static void InitialiseStaff(ApplicationDbContext context)
+        {
+            if (context.Staff.Any())
+            {
+                return;
+            }
+
+            var staff = new Staff[]
+            {
+                new Staff {Department = Staff.Departments.Finance, JobTitle = Staff.JobTitles.Accountant, Salary = 28935},
+                new Staff {Department = Staff.Departments.HQ, JobTitle = Staff.JobTitles.Manager, Salary = 63420},
+                new Staff {Department = Staff.Departments.HR, JobTitle = Staff.JobTitles.Supervisor, Salary = 35320},
+                new Staff {Department = Staff.Departments.Sales, JobTitle = Staff.JobTitles.SalesStaff, Salary = 25125},
+                new Staff {Department = Staff.Departments.Support, JobTitle = Staff.JobTitles.CustomerAssistant, Salary = 23500},
+
+
+            };
+
+            foreach (Staff a in staff)
+            {
+                context.Staff.Add(a);
+            }
+
+            context.SaveChanges();
+        }
+
+        //Seed data by Conor
+        private static void InitialiseOrders(ApplicationDbContext context)
+        {
+            if (context.Order.Any())
+            {
+                return;
+            }
+            var orders = new Order[]
+            {
+                new Order {Date = DateTime.Now, Status = OrderStatus.received, SubTotal = "£2.50"},
+                new Order {Date = DateTime.Now, Status = OrderStatus.delivered, SubTotal = "£5.00"},
+                new Order {Date = DateTime.Now, Status = OrderStatus.intransit, SubTotal = "£7.50"}
+            };
+
+            foreach (Order a in orders)
+            {
+                context.Order.Add(a);
+            }
+
+            context.SaveChanges();
+        }
+
+        //Seed data by Conor
+        private static void InitialiseLaces(ApplicationDbContext context)
+        {
+            if (context.Lace.Any())
+            {
+                return;
+            }
+            var laces = new Lace[]
+            {
+                new Lace {Colour = Colours.Black, Print = "Blue Lace", Brand = Brands.Nike, Length = 10, ImageURL = "Image.com", Description = "One of the best"},
+                new Lace {Colour = Colours.Green, Brand = Brands.UnderArmour, Length = 20, ImageURL = "Image2.com"},
+                new Lace {Colour = Colours.Pink, Brand = Brands.Adidas, Length = 10, ImageURL = "Image3.co.uk", Description = "A great lace"}
+            };
+
+            foreach (Lace a in laces)
+            {
+                context.Lace.Add(a);
+            }
+
+            context.SaveChanges();
+        }
+
+
+        /* private static void InitialiseItem(ApplicationDbContext context)
+         {
+             if (context.Item.Any())
+             {
+                 return;
+             }
+
+             var items = new Item[]
+             {
+
+
+
+             };
+
+             foreach (Item a in items)
+             {
+                 context.Item.Add(a);
+             }
+
+             context.SaveChanges();
+         }*/
     }
 }

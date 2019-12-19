@@ -11,23 +11,27 @@ namespace AgletCoreMVC.Models
     {
         public int LaceID { get; set; }
 
+        [Required]
         public Colours Colour { get; set; }
 
         // The users text for printing on the lace
+        [StringLength(15, ErrorMessage = "Your print can't exceed 15 characters")]
         public string Print { get; set; }
 
+        [Required]
         public Brands Brand { get; set; }
 
+        [Required]
         [Range(5, 50)]
-        public int Length { get; set; }
+        public int Length { get; set; } //in mm
 
+        [Required]
         public string ImageURL { get; set; }
 
         [DataType(DataType.MultilineText)]
         public string Description { get; set; }
 
-
-            // Navigation
+        // Navigation
         //public virtual ICollection<Item> Item { get; set; }
     }
 
@@ -35,12 +39,19 @@ namespace AgletCoreMVC.Models
     {
         White,
         Black,
-        Green
+        Green,
+        Blue,
+        Red,
+        Yellow,
+        Pink,
+        Grey,
+        Cyan,
+        Purple
     }
 
     public enum Brands
     {
-        Addidas,
+        Adidas,
         Nike,
         UnderArmour
     }
