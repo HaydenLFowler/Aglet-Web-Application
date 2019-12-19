@@ -35,6 +35,7 @@ namespace AgletCoreMVC.Models
 
         public Nullable<int> StaffID { get; set; }
 
+        // not needed
         public Nullable<int> CustomerID { get; set; }
 
         public int AdressID { get; set; }

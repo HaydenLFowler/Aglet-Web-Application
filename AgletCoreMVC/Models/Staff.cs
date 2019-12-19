@@ -10,18 +10,18 @@ namespace AgletCoreMVC.Models
         public int StaffID { get; set; }
 
         [Required]
-        public Departments Department;
+        public Departments Department { get; set; }
 
         [Required]
         [RegularExpression(@"^\d+\.\d{0,2}$")]
         [Range(0, 9999999999999999.99)]
-        public decimal Salary;
+        public decimal Salary { get; set; }
 
         [Required]
-        public JobTitles JobTitle;
+        public JobTitles JobTitle { get; set; }
 
         // Navigation
-	    public virtual User UserID {get; set;}
+        public virtual User UserID {get; set;}
 
         public enum Departments
         {
