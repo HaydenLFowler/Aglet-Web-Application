@@ -17,7 +17,7 @@ public class Contact
    [Required, StringLength(20)]
     public string Phone {get; set;}
 
-    public int UserID { get; set; }
+    //public int UserID { get; set; }
 
         // Navigation
 	public virtual User User { get; set; }
