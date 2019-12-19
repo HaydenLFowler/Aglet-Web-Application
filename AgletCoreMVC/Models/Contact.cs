@@ -14,7 +14,8 @@ public class Contact
     [DataType(DataType.EmailAddress), StringLength(100)]
     public string Email {get;set; }
 
-   [Required, StringLength(20)]
+   [Required, StringLength(20, ErrorMessage = "Phone Number must be filled in")]
+   [Display (Name = "Phone Number")]
     public string Phone {get; set;}
 
     //public int UserID { get; set; }
