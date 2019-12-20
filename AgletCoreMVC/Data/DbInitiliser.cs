@@ -15,7 +15,7 @@ namespace AgletCoreMVC.Data
 
             InitialiseContacts(context);
             InitialiseStaff(context);
-            //InitialiseUsers(context);
+            InitialiseUsers(context);
             //InitialiseLaces(context);
             //InitialiseOrders(context);
 
@@ -85,15 +85,15 @@ namespace AgletCoreMVC.Data
                 new User{FirstName = "Evelyn", Surname = "Stanley", IsCustomer = true, IsStaff = false, AdressID = 20,
                     ContactID = 20},
                 new User{FirstName = "John", Surname = "Watkins", IsCustomer = true, IsStaff = true, AdressID = 21,
-                    ContactID = 21, StaffID = 6},
+                    ContactID = 21, StaffID = 1},
                 new User{FirstName = "Eddy", Surname = "Hardy", IsCustomer = true, IsStaff = true, AdressID = 22,
-                    ContactID = 22, StaffID = 7},
+                    ContactID = 22, StaffID = 2},
                 new User{FirstName = "Nick", Surname = "Reynolds", IsCustomer = false, IsStaff = true, AdressID = 23,
-                    ContactID = 23, StaffID = 8},
+                    ContactID = 23, StaffID = 3},
                 new User{FirstName = "Lisa", Surname = "Mathis", IsCustomer = false, IsStaff = true, AdressID = 24,
-                    ContactID = 24, StaffID = 9},
+                    ContactID = 24, StaffID = 4},
                 new User{FirstName = "Alice", Surname = "Williams", IsCustomer = false, IsStaff = true, AdressID = 25,
-                    ContactID = 25, StaffID = 10},
+                    ContactID = 25, StaffID = 5},
 
 
 
@@ -265,22 +265,22 @@ namespace AgletCoreMVC.Data
                 new Contact {Email = "Customer4@gmail.com", Phone = "07811270000"},
                 new Contact {Email = "Customer5@gmail.com", Phone = "07867290000"},
                 new Contact {Email = "Customer6@gmail.com", Phone = "07896740000"},
-                new Contact {Email = "Customer7@gmail.com", Phone = "070 4951 9971 "},
-                new Contact {Email = "Customer8@gmail.com", Phone = "079 1810 3448 "},
-                new Contact {Email = "Customer9@gmail.com", Phone = "077 2052 4101 "},
-                new Contact {Email = "Customer11@gmail.com", Phone = "070 3021 6070 "},
-                new Contact {Email = "Customer12@gmail.com", Phone = "077 1212 9738"},
-                new Contact {Email = "Customer13@gmail.com", Phone = "070 0126 3673 "},
-                new Contact {Email = "Customer14@gmail.com", Phone = "077 3790 8103"},
-                new Contact {Email = "Customer15@gmail.com", Phone = "078 5441 8459 "},
-                new Contact {Email = "Customer16@gmail.com", Phone = "078 8654 5833 "},
-                new Contact {Email = "Customer17@gmail.com", Phone = "079 7677 7169 "},
-                new Contact {Email = "Customer18@gmail.com", Phone = "077 7740 9515"},
-                new Contact {Email = "Customer19@gmail.com", Phone = "079 7539 5614 "},
-                new Contact {Email = "Customer20@gmail.com", Phone = "077 2463 0714"},
-                new Contact {Email = "Customer21@gmail.com", Phone = "070 8272 4859"},
-                new Contact {Email = "Customer22@gmail.com", Phone = "079 0661 9496"},
-                new Contact {Email = "Customer23@gmail.com", Phone = "079 7880 0056"}
+                new Contact {Email = "Customer7@gmail.com", Phone = "07049519971 "},
+                new Contact {Email = "Customer8@gmail.com", Phone = "07918103448"},
+                new Contact {Email = "Customer9@gmail.com", Phone = "07720524101"},
+                new Contact {Email = "Customer11@gmail.com", Phone = "07030216070"},
+                new Contact {Email = "Customer12@gmail.com", Phone = "07712129738"},
+                new Contact {Email = "Customer13@gmail.com", Phone = "07001263673"},
+                new Contact {Email = "Customer14@gmail.com", Phone = "07737908103"},
+                new Contact {Email = "Customer15@gmail.com", Phone = "07854418459"},
+                new Contact {Email = "Customer16@gmail.com", Phone = "07886545833"},
+                new Contact {Email = "Customer17@gmail.com", Phone = "07976777169"},
+                new Contact {Email = "Customer18@gmail.com", Phone = "07777409515"},
+                new Contact {Email = "Customer19@gmail.com", Phone = "07975395614"},
+                new Contact {Email = "Customer20@gmail.com", Phone = "07724630714"},
+                new Contact {Email = "Customer21@gmail.com", Phone = "07082724859"},
+                new Contact {Email = "Customer22@gmail.com", Phone = "07906619496"},
+                new Contact {Email = "Customer23@gmail.com", Phone = "07978800056"}
             };
 
             foreach (Contact a in contacts)
