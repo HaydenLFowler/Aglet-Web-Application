@@ -35,12 +35,11 @@ namespace AgletCoreMVC.Models
 
         public Nullable<int> StaffID { get; set; }
 
-        // not needed
-        public Nullable<int> CustomerID { get; set; }
+        public Nullable<int> AddressID { get; set; }
 
-        public int AdressID { get; set; }
+        public Nullable<int> ContactID { get; set; }
 
-        public int ContactID { get; set; }
+        public Nullable<int> PaymentCardID { get; set; }
 
         //  Navigation Properties (relationships)
 
@@ -53,6 +52,7 @@ namespace AgletCoreMVC.Models
         public virtual Staff Staff { get; set; }
 
         public virtual Address Address { get; set; }
+
 
 
         public User()

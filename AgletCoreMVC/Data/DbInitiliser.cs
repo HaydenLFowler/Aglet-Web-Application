@@ -18,8 +18,6 @@ namespace AgletCoreMVC.Data
             InitialiseUsers(context);
             //InitialiseLaces(context);
             //InitialiseOrders(context);
-
-
         }
 
 
@@ -39,64 +37,61 @@ namespace AgletCoreMVC.Data
                     Surname = "Garza",
                     IsCustomer = true,
                     IsStaff = false,
-                    AdressID = 1,
+                    AddressID = 1,
                     ContactID = 1
                 },
                 new User
-                { FirstName = "Tracey ", Surname = "Klein", IsCustomer = true, IsStaff = false, AdressID = 1,
+                { FirstName = "Tracey ", Surname = "Klein", IsCustomer = true, IsStaff = false, AddressID = 1,
                     ContactID = 1},
                 new User
-                { FirstName = "Andrew", Surname = "Day", IsCustomer = true, IsStaff = false, AdressID = 2,
+                { FirstName = "Andrew", Surname = "Day", IsCustomer = true, IsStaff = false, AddressID = 2,
                     ContactID = 2},
-                new User{FirstName = "Bruce", Surname = "Fowler", IsCustomer = true, IsStaff = false, AdressID = 3,
+                new User{FirstName = "Bruce", Surname = "Fowler", IsCustomer = true, IsStaff = false, AddressID = 3,
                     ContactID = 3},
-                new User{FirstName = "Frank", Surname = "Gardner", IsCustomer = true, IsStaff = false, AdressID = 4,
+                new User{FirstName = "Frank", Surname = "Gardner", IsCustomer = true, IsStaff = false, AddressID = 4,
                     ContactID = 4},
-                new User{FirstName = "Louise", Surname = "Wolfe", IsCustomer = true, IsStaff = false, AdressID = 5,
+                new User{FirstName = "Louise", Surname = "Wolfe", IsCustomer = true, IsStaff = false, AddressID = 5,
                     ContactID = 5},
-                new User{FirstName = "Robyn", Surname = "Guzman", IsCustomer = true, IsStaff = false, AdressID = 6,
+                new User{FirstName = "Robyn", Surname = "Guzman", IsCustomer = true, IsStaff = false, AddressID = 6,
                     ContactID = 6},
-                new User{FirstName = "Arnold", Surname = "Foster", IsCustomer = true, IsStaff = false, AdressID = 7,
+                new User{FirstName = "Arnold", Surname = "Foster", IsCustomer = true, IsStaff = false, AddressID = 7,
                     ContactID = 7},
-                new User{FirstName = "Joe", Surname = "Salazar", IsCustomer = true, IsStaff = false, AdressID = 8,
+                new User{FirstName = "Joe", Surname = "Salazar", IsCustomer = true, IsStaff = false, AddressID = 8,
                     ContactID = 8},
-                new User{FirstName = "Conor", Surname = "Hudson", IsCustomer = true, IsStaff = false, AdressID = 9,
+                new User{FirstName = "Conor", Surname = "Hudson", IsCustomer = true, IsStaff = false, AddressID = 9,
                     ContactID = 9},
-                new User{FirstName = "Hayden", Surname = "Perkins", IsCustomer = true, IsStaff = false, AdressID = 10,
+                new User{FirstName = "Hayden", Surname = "Perkins", IsCustomer = true, IsStaff = false, AddressID = 10,
                     ContactID = 10},
-                new User{FirstName = "Hew", Surname = "Reed", IsCustomer = true, IsStaff = false, AdressID = 11,
+                new User{FirstName = "Hew", Surname = "Reed", IsCustomer = true, IsStaff = false, AddressID = 11,
                     ContactID = 11},
-                new User{FirstName = "Kelly", Surname = "Paul", IsCustomer = true, IsStaff = false, AdressID = 12,
+                new User{FirstName = "Kelly", Surname = "Paul", IsCustomer = true, IsStaff = false, AddressID = 12,
                     ContactID = 12},
-                new User{FirstName = "William", Surname = "Nash", IsCustomer = true, IsStaff = false, AdressID = 13,
+                new User{FirstName = "William", Surname = "Nash", IsCustomer = true, IsStaff = false, AddressID = 13,
                     ContactID = 13},
-                new User{FirstName = "Jess", Surname = "Wright", IsCustomer = true, IsStaff = false, AdressID = 14,
+                new User{FirstName = "Jess", Surname = "Wright", IsCustomer = true, IsStaff = false, AddressID = 14,
                     ContactID = 14},
-                new User{FirstName = "Riley", Surname = "Mitchell", IsCustomer = true, IsStaff = false, AdressID = 15,
+                new User{FirstName = "Riley", Surname = "Mitchell", IsCustomer = true, IsStaff = false, AddressID = 15,
                     ContactID = 15},
-                new User{FirstName = "Sienna", Surname = "Malone", IsCustomer = true, IsStaff = false, AdressID = 16,
+                new User{FirstName = "Sienna", Surname = "Malone", IsCustomer = true, IsStaff = false, AddressID = 16,
                     ContactID = 16},
-                new User{FirstName = "Zack", Surname = "Kent", IsCustomer = true, IsStaff = false, AdressID = 17,
+                new User{FirstName = "Zack", Surname = "Kent", IsCustomer = true, IsStaff = false, AddressID = 17,
                     ContactID = 17},
-                new User{FirstName = "Owen", Surname = "Calrk", IsCustomer = true, IsStaff = false, AdressID = 18,
+                new User{FirstName = "Owen", Surname = "Calrk", IsCustomer = true, IsStaff = false, AddressID = 18,
                     ContactID = 18},
-                new User{FirstName = "Spencer", Surname = "Heron", IsCustomer = true, IsStaff = false, AdressID = 19,
+                new User{FirstName = "Spencer", Surname = "Heron", IsCustomer = true, IsStaff = false, AddressID = 19,
                     ContactID = 19},
-                new User{FirstName = "Evelyn", Surname = "Stanley", IsCustomer = true, IsStaff = false, AdressID = 20,
+                new User{FirstName = "Evelyn", Surname = "Stanley", IsCustomer = true, IsStaff = false, AddressID = 20,
                     ContactID = 20},
-                new User{FirstName = "John", Surname = "Watkins", IsCustomer = true, IsStaff = true, AdressID = 21,
+                new User{FirstName = "John", Surname = "Watkins", IsCustomer = true, IsStaff = true, AddressID = 21,
                     ContactID = 21, StaffID = 1},
-                new User{FirstName = "Eddy", Surname = "Hardy", IsCustomer = true, IsStaff = true, AdressID = 22,
+                new User{FirstName = "Eddy", Surname = "Hardy", IsCustomer = true, IsStaff = true, AddressID = 22,
                     ContactID = 22, StaffID = 2},
-                new User{FirstName = "Nick", Surname = "Reynolds", IsCustomer = false, IsStaff = true, AdressID = 23,
+                new User{FirstName = "Nick", Surname = "Reynolds", IsCustomer = false, IsStaff = true, AddressID = 23,
                     ContactID = 23, StaffID = 3},
-                new User{FirstName = "Lisa", Surname = "Mathis", IsCustomer = false, IsStaff = true, AdressID = 24,
+                new User{FirstName = "Lisa", Surname = "Mathis", IsCustomer = false, IsStaff = true, AddressID = 24,
                     ContactID = 24, StaffID = 4},
-                new User{FirstName = "Alice", Surname = "Williams", IsCustomer = false, IsStaff = true, AdressID = 25,
+                new User{FirstName = "Alice", Surname = "Williams", IsCustomer = false, IsStaff = true, AddressID = 25,
                     ContactID = 25, StaffID = 5},
-
-
-
             };
 
             foreach (User a in users)
@@ -167,8 +162,6 @@ namespace AgletCoreMVC.Data
                 new Staff {Department = Staff.Departments.HR, JobTitle = Staff.JobTitles.Supervisor, Salary = 35320},
                 new Staff {Department = Staff.Departments.Sales, JobTitle = Staff.JobTitles.SalesStaff, Salary = 25125},
                 new Staff {Department = Staff.Departments.Support, JobTitle = Staff.JobTitles.CustomerAssistant, Salary = 23500},
-
-
             };
 
             foreach (Staff a in staff)
@@ -300,12 +293,12 @@ namespace AgletCoreMVC.Data
 
             var paymentcards = new PaymentCard[]
             {
-                new PaymentCard{ CardName = "Leon", CardNumber = 8753271626384597, ExpiryMonth = 12, ExpiryYear = 2023, SecurityCode = 546},
-                new PaymentCard{ CardName = "Tracey", CardNumber = 2635172834927261, ExpiryMonth = 1, ExpiryYear = 2025, SecurityCode = 963},
-                new PaymentCard{ CardName = "Bruce", CardNumber = 5627265142899283, ExpiryMonth = 2, ExpiryYear = 2028, SecurityCode = 240},
-                new PaymentCard{ CardName = "Frank", CardNumber = 61782531, ExpiryMonth = 11, ExpiryYear = 2020, SecurityCode = 663},
-                new PaymentCard{ CardName = "Zack", CardNumber = 24453311, ExpiryMonth = 7, ExpiryYear = 2023, SecurityCode = 922},
-                new PaymentCard{ CardName = "Owen", CardNumber = 59182712, ExpiryMonth = 4, ExpiryYear = 2025, SecurityCode = 248},
+                new PaymentCard{ CardName = "Leon",  CardNumber = "8753 2716 2638 4597", ExpiryMonth = 12, ExpiryYear = 2023, SecurityCode = 546},
+                new PaymentCard{ CardName = "Tracey",CardNumber = "2635 1728 3492 7261", ExpiryMonth = 1, ExpiryYear = 2025, SecurityCode = 963},
+                new PaymentCard{ CardName = "Bruce", CardNumber = "5627 2651 4289 9283", ExpiryMonth = 2, ExpiryYear = 2028, SecurityCode = 240},
+                new PaymentCard{ CardName = "Frank", CardNumber = "6178 2531 5432 7766", ExpiryMonth = 11, ExpiryYear = 2020, SecurityCode = 663},
+                new PaymentCard{ CardName = "Zack",  CardNumber = "2445 3311 7665 0998", ExpiryMonth = 7, ExpiryYear = 2023, SecurityCode = 922},
+                new PaymentCard{ CardName = "Owen",  CardNumber = "5918 2712 0099 4433", ExpiryMonth = 4, ExpiryYear = 2025, SecurityCode = 248},
             };
 
             foreach (PaymentCard a in paymentcards)

@@ -4,14 +4,16 @@ using AgletCoreMVC.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace AgletCoreMVC.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20200107202050_CorrectAddressSpelling")]
+    partial class CorrectAddressSpelling
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -132,23 +134,24 @@ namespace AgletCoreMVC.Data.Migrations
 
             modelBuilder.Entity("AgletCoreMVC.Models.PaymentCard", b =>
                 {
-                    b.Property<int>("PaymentCardID")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                    b.Property<string>("PaymentCardID")
+                        .ValueGeneratedOnAdd();
 
                     b.Property<string>("CardName")
                         .IsRequired()
                         .HasMaxLength(30);
 
-                    b.Property<string>("CardNumber")
-                        .IsRequired()
-                        .HasMaxLength(20);
+                    b.Property<long>("CardNumber")
+                        .HasMaxLength(16);
 
-                    b.Property<int>("ExpiryMonth");
+                    b.Property<int>("ExpiryMonth")
+                        .HasMaxLength(2);
 
-                    b.Property<int>("ExpiryYear");
+                    b.Property<int>("ExpiryYear")
+                        .HasMaxLength(4);
 
-                    b.Property<int>("SecurityCode");
+                    b.Property<int>("SecurityCode")
+                        .HasMaxLength(3);
 
                     b.HasKey("PaymentCardID");
 
@@ -195,6 +198,8 @@ namespace AgletCoreMVC.Data.Migrations
 
                     b.Property<int?>("PaymentCardID");
 
+                    b.Property<string>("PaymentCardID1");
+
                     b.Property<int?>("StaffID");
 
                     b.Property<string>("Surname")
@@ -209,7 +214,7 @@ namespace AgletCoreMVC.Data.Migrations
                         .IsUnique()
                         .HasFilter("[ContactID] IS NOT NULL");
 
-                    b.HasIndex("PaymentCardID");
+                    b.HasIndex("PaymentCardID1");
 
                     b.HasIndex("StaffID")
                         .IsUnique()
@@ -415,7 +420,7 @@ namespace AgletCoreMVC.Data.Migrations
 
                     b.HasOne("AgletCoreMVC.Models.PaymentCard", "PaymentCard")
                         .WithMany()
-                        .HasForeignKey("PaymentCardID");
+                        .HasForeignKey("PaymentCardID1");
 
                     b.HasOne("AgletCoreMVC.Models.Staff", "Staff")
                         .WithOne("UserID")

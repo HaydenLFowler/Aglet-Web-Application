@@ -9,39 +9,35 @@ using System.ComponentModel.DataAnnotations;
 ///
 namespace AgletCoreMVC.Models
 {
-public class PaymentCard 
+    /// <summary>
+    /// PaymentCardID has been changed from string to int
+    /// CardNumber has been changed from long to string
+    /// int cannot have StringLength, just Range
+    /// </summary>
+    public class PaymentCard 
     {
+	    public int PaymentCardID { get; set; }
 
-	public string PaymentCardID { get; set; }
+        // Customers name
+        [Required]
+        [StringLength(30, ErrorMessage = "Please Enter a valid name on the card"), DisplayName("Card Name")]
+        public string CardName { get; set; }
 
-    // Customers name
-    [Required]
-    [StringLength(30, ErrorMessage = "Please Enter a vaild card number"), DisplayName("Card Name")]
-    public string CardName { get; set; }
+        [Required]
+        [StringLength(20, MinimumLength = 16, ErrorMessage = "Please Enter a 16 digit valid Card number"), DisplayName("Card Number")]
+        public string CardNumber { get; set;}
+ 
+        [Required, Range(100,999)]
+        [DisplayName("Security Code")]
+         public int SecurityCode {get; set;}
 
-    [Required]
-    [StringLength(16, ErrorMessage = "Please Enter a valid Card number"), DisplayName("Card Number")]
-    public long CardNumber { get; set;}
+        [Required, Range(1,12)]
+        [DisplayName("Exipry Month")]
+        public int ExpiryMonth {get; set;}
 
-    
-	//public int CustomerID;
-
-   [Required, Range(200,900)]
-   [StringLength(3, ErrorMessage = "Please Enter a valid Card number"), DisplayName("Security Code")]
-     public int SecurityCode {get; set;}
-
-    
-    [Required, Range(1,12)]
-    [StringLength(2, ErrorMessage = "Please Enter a valid Card number"), DisplayName("Exipry Month")]
-    public int ExpiryMonth {get; set;}
-
-    [Required, Range(2019, 2029)]
-    [StringLength(4, ErrorMessage = "Please Enter a valid Card number"), DisplayName("Expiry Year")]
-    public int ExpiryYear { get; set; }
-
-        // Navigation
-        //public virtual User UserID { get; set; }
-
+        [Required, Range(2019, 2029)]
+        [DisplayName("Expiry Year")]
+        public int ExpiryYear { get; set; }
 
     }
 }
