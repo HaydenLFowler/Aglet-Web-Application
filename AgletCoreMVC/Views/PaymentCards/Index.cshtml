@@ -1,17 +1,20 @@
 ﻿@model IEnumerable<AgletCoreMVC.Models.PaymentCard>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Payment Card List";
 }
 
-<h2>Index</h2>
+    <header class="jumbotron">
+        <h2>
+            List of Laces
+        </h2>
+    </header>
 
 <p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
+    <a class="btn btn-success" asp-action="Create">Create New Payment Card</a></p>
+<table class="table table-bordered table-hover table-striped">
     <thead>
-        <tr>
+        <tr class="info">
             <th>
                 @Html.DisplayNameFor(model => model.CardName)
             </th>
@@ -31,29 +34,30 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.CardName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CardNumber)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.SecurityCode)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ExpiryMonth)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ExpiryYear)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.PaymentCardID">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.PaymentCardID">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.PaymentCardID">Delete</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CardName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CardNumber)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SecurityCode)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ExpiryMonth)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ExpiryYear)
+                </td>
+                <td>
+                    <a class="btn btn-success" asp-action="Edit" asp-route-id="@item.PaymentCardID">Edit</a>
+                    <a class="btn btn-warning" asp-action="Details" asp-route-id="@item.PaymentCardID">Details</a>
+                    <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.PaymentCardID">Delete</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>

@@ -19,9 +19,8 @@ public class Item {
     // curren y annotations
 
     [Required]
-    [RegularExpression(@"^\d+\.\d{0,2}$")]
     [Range(0, 9999.99)]
-    public decimal Price {get; set;}
+    public string Price {get; set;}
 
     public int LaceID { get; set; }
 
