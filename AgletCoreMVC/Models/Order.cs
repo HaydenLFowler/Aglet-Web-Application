@@ -26,6 +26,8 @@ namespace AgletCoreMVC.Models
 
         public virtual User UserID { get; set; }
 
+        public virtual Lace LaceID { get; set; } 
+
     }
 
     public enum OrderStatus
