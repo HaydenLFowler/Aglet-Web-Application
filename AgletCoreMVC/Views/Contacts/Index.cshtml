@@ -1,17 +1,19 @@
 ﻿@model IEnumerable<AgletCoreMVC.Models.Contact>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Contact List";
 }
 
-<h2>Index</h2>
+<header class="jumbotron">
+    <h2>List of Contacts</h2>
+</header>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a class="btn btn-success" asp-action="Create">Create New Contact</a>
 </p>
-<table class="table">
+<table class="table table-bordered table-hover table-striped">
     <thead>
-        <tr>
+        <tr class="text-info">
             <th>
                 @Html.DisplayNameFor(model => model.Email)
             </th>
@@ -31,7 +33,7 @@
                 @Html.DisplayFor(modelItem => item.Phone)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.ContactID">Edit</a> |
+                <a class="btn btn-success" asp-action="Edit" asp-route-id="@item.ContactID">Edit</a> |
                 <a asp-action="Details" asp-route-id="@item.ContactID">Details</a> |
                 <a asp-action="Delete" asp-route-id="@item.ContactID">Delete</a>
             </td>

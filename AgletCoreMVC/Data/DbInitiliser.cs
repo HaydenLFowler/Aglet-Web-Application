@@ -183,7 +183,7 @@ namespace AgletCoreMVC.Data
             {
                 new Order {Date = DateTime.Now, Status = OrderStatus.received, SubTotal = "£2.50"},
                 new Order {Date = DateTime.Now, Status = OrderStatus.delivered, SubTotal = "£5.00"},
-                new Order {Date = DateTime.Now, Status = OrderStatus.intransit, SubTotal = "£7.50"}
+                new Order {Date = DateTime.Now, Status = OrderStatus.intransit, SubTotal = "£7.50", }
             };
 
             foreach (Order a in orders)
