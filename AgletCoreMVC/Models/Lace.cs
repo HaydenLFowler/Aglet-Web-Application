@@ -15,7 +15,7 @@ namespace AgletCoreMVC.Models
         public Colours Colour { get; set; }
 
         // The users text for printing on the lace
-        [StringLength(15, ErrorMessage = "Your print can't exceed 15 characters")]
+        [StringLength(20, ErrorMessage = "Your print can't exceed 20 characters")]
         public string Print { get; set; }
 
         [Required]

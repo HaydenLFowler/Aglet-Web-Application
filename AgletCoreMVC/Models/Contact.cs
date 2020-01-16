@@ -18,11 +18,5 @@ namespace AgletCoreMVC.Models
        [Display (Name = "Phone Number")]
         public string Phone {get; set;}
 
-        //public int UserID { get; set; }
-
-            // Navigation
-	    public virtual User User { get; set; }
-
-
     }
 }

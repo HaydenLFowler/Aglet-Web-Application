@@ -13,21 +13,20 @@ namespace AgletCoreMVC.Models
         public int OrderID { get; set; }
 
         [Required]
-        public DateTime Date { get; set; }
+        public DateTime DateOrdered { get; set; }
 
         [Required]
         public OrderStatus Status { get; set; }
 
         [Range(0, 9999999.99)]
-        public string SubTotal { get; set; }
+        public decimal SubTotal { get; set; }
+
+        public int UserID { get; set; }
 
         // Navigation
         public virtual ICollection<Item> Item {get; set;}
 
-        public virtual User UserID { get; set; }
-
-        public virtual Lace LaceID { get; set; } 
-
+        public virtual User User { get; set; }
     }
 
     public enum OrderStatus

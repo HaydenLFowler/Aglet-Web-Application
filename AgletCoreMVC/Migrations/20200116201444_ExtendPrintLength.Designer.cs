@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AgletCoreMVC.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20200116114622_StaffChanges")]
-    partial class StaffChanges
+    [Migration("20200116201444_ExtendPrintLength")]
+    partial class ExtendPrintLength
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -104,7 +104,7 @@ namespace AgletCoreMVC.Migrations
                     b.Property<int>("Length");
 
                     b.Property<string>("Print")
-                        .HasMaxLength(15);
+                        .HasMaxLength(20);
 
                     b.HasKey("LaceID");
 
@@ -117,17 +117,17 @@ namespace AgletCoreMVC.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<DateTime>("Date");
+                    b.Property<DateTime>("DateOrdered");
 
                     b.Property<int>("Status");
 
-                    b.Property<string>("SubTotal");
+                    b.Property<decimal>("SubTotal");
 
-                    b.Property<int?>("UserID1");
+                    b.Property<int>("UserID");
 
                     b.HasKey("OrderID");
 
-                    b.HasIndex("UserID1");
+                    b.HasIndex("UserID");
 
                     b.ToTable("Order");
                 });
@@ -167,8 +167,7 @@ namespace AgletCoreMVC.Migrations
 
                     b.Property<int>("JobTitle");
 
-                    b.Property<string>("Salary")
-                        .IsRequired();
+                    b.Property<decimal>("Salary");
 
                     b.HasKey("StaffID");
 
@@ -208,15 +207,11 @@ namespace AgletCoreMVC.Migrations
 
                     b.HasIndex("AddressID");
 
-                    b.HasIndex("ContactID")
-                        .IsUnique()
-                        .HasFilter("[ContactID] IS NOT NULL");
+                    b.HasIndex("ContactID");
 
                     b.HasIndex("PaymentCardID");
 
-                    b.HasIndex("StaffID")
-                        .IsUnique()
-                        .HasFilter("[StaffID] IS NOT NULL");
+                    b.HasIndex("StaffID");
 
                     b.ToTable("User");
                 });
@@ -401,9 +396,10 @@ namespace AgletCoreMVC.Migrations
 
             modelBuilder.Entity("AgletCoreMVC.Models.Order", b =>
                 {
-                    b.HasOne("AgletCoreMVC.Models.User", "UserID")
+                    b.HasOne("AgletCoreMVC.Models.User", "User")
                         .WithMany("Orders")
-                        .HasForeignKey("UserID1");
+                        .HasForeignKey("UserID")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 
             modelBuilder.Entity("AgletCoreMVC.Models.User", b =>
@@ -413,16 +409,16 @@ namespace AgletCoreMVC.Migrations
                         .HasForeignKey("AddressID");
 
                     b.HasOne("AgletCoreMVC.Models.Contact", "Contact")
-                        .WithOne("User")
-                        .HasForeignKey("AgletCoreMVC.Models.User", "ContactID");
+                        .WithMany()
+                        .HasForeignKey("ContactID");
 
                     b.HasOne("AgletCoreMVC.Models.PaymentCard", "PaymentCard")
                         .WithMany()
                         .HasForeignKey("PaymentCardID");
 
                     b.HasOne("AgletCoreMVC.Models.Staff", "Staff")
-                        .WithOne("UserID")
-                        .HasForeignKey("AgletCoreMVC.Models.User", "StaffID");
+                        .WithMany()
+                        .HasForeignKey("StaffID");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

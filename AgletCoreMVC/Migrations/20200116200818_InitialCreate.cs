@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace AgletCoreMVC.Migrations
 {
-    public partial class initailcreate : Migration
+    public partial class InitialCreate : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -284,20 +284,20 @@ namespace AgletCoreMVC.Migrations
                 {
                     OrderID = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    Date = table.Column<DateTime>(nullable: false),
+                    DateOrdered = table.Column<DateTime>(nullable: false),
                     Status = table.Column<int>(nullable: false),
-                    SubTotal = table.Column<string>(nullable: true),
-                    UserID1 = table.Column<int>(nullable: true)
+                    SubTotal = table.Column<decimal>(nullable: false),
+                    UserID = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Order", x => x.OrderID);
                     table.ForeignKey(
-                        name: "FK_Order_User_UserID1",
-                        column: x => x.UserID1,
+                        name: "FK_Order_User_UserID",
+                        column: x => x.UserID,
                         principalTable: "User",
                         principalColumn: "UserID",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -378,9 +378,9 @@ namespace AgletCoreMVC.Migrations
                 column: "OrderID");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Order_UserID1",
+                name: "IX_Order_UserID",
                 table: "Order",
-                column: "UserID1");
+                column: "UserID");
 
             migrationBuilder.CreateIndex(
                 name: "IX_User_AddressID",
@@ -390,9 +390,7 @@ namespace AgletCoreMVC.Migrations
             migrationBuilder.CreateIndex(
                 name: "IX_User_ContactID",
                 table: "User",
-                column: "ContactID",
-                unique: true,
-                filter: "[ContactID] IS NOT NULL");
+                column: "ContactID");
 
             migrationBuilder.CreateIndex(
                 name: "IX_User_PaymentCardID",
@@ -402,9 +400,7 @@ namespace AgletCoreMVC.Migrations
             migrationBuilder.CreateIndex(
                 name: "IX_User_StaffID",
                 table: "User",
-                column: "StaffID",
-                unique: true,
-                filter: "[StaffID] IS NOT NULL");
+                column: "StaffID");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)

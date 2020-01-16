@@ -16,8 +16,9 @@ namespace AgletCoreMVC.Data
             InitialiseContacts(context);
             InitialiseStaff(context);
             InitialiseUsers(context);
-            //InitialiseLaces(context);
-            //InitialiseOrders(context);
+            InitialiseLaces(context);
+            InitialiseOrders(context);
+            //InitialiseItems(context);
         }
 
 
@@ -157,11 +158,11 @@ namespace AgletCoreMVC.Data
 
             var staff = new Staff[]
             {
-                new Staff {Department = Staff.Departments.Finance, JobTitle = Staff.JobTitles.Accountant, Salary = "£28935.00"},
-                new Staff {Department = Staff.Departments.HQ, JobTitle = Staff.JobTitles.Manager, Salary = "£63420.00"},
-                new Staff {Department = Staff.Departments.HR, JobTitle = Staff.JobTitles.Supervisor, Salary = "£35320.00"},
-                new Staff {Department = Staff.Departments.Sales, JobTitle = Staff.JobTitles.SalesStaff, Salary = "£25125.00"},
-                new Staff {Department = Staff.Departments.Support, JobTitle = Staff.JobTitles.CustomerAssistant, Salary = "£23500.00"},
+                new Staff {Department = Staff.Departments.Finance, JobTitle = Staff.JobTitles.Accountant, Salary = 28935.00m},
+                new Staff {Department = Staff.Departments.HQ, JobTitle = Staff.JobTitles.Manager, Salary = 63420.00m},
+                new Staff {Department = Staff.Departments.HR, JobTitle = Staff.JobTitles.Supervisor, Salary = 35320.00m},
+                new Staff {Department = Staff.Departments.Sales, JobTitle = Staff.JobTitles.SalesStaff, Salary = 25125.00m},
+                new Staff {Department = Staff.Departments.Support, JobTitle = Staff.JobTitles.CustomerAssistant, Salary = 23500.00m},
             };
 
             foreach (Staff a in staff)
@@ -181,29 +182,29 @@ namespace AgletCoreMVC.Data
             }
             var orders = new Order[]
             {
-                new Order {Date = DateTime.Now, Status = OrderStatus.received, SubTotal = "£2.50", LaceID = 1, UserID = 1},
-                new Order {Date = DateTime.Now, Status = OrderStatus.delivered, SubTotal = "£5.00", LaceID = 2, UserID = 2},
-                new Order {Date = DateTime.Now, Status = OrderStatus.intransit, SubTotal = "£7.50", LaceID = 3, UserID = 3},
-                new Order {Date = DateTime.Now, Status = OrderStatus.delivered, SubTotal = "£25.00", LaceID = 4, UserID = 4},
-                new Order {Date = DateTime.Now, Status = OrderStatus.received, SubTotal = "£17.00", LaceID = 5, UserID = 5},
-                new Order {Date = DateTime.Now, Status = OrderStatus.intransit, SubTotal = "£4.50", LaceID = 6, UserID = 6},
-                new Order {Date = DateTime.Now, Status = OrderStatus.received, SubTotal = "£5.50", LaceID = 7, UserID = 7},
-                new Order {Date = DateTime.Now, Status = OrderStatus.intransit, SubTotal = "£12.50", LaceID = 8, UserID = 8},
-                new Order {Date = DateTime.Now, Status = OrderStatus.intransit, SubTotal = "£9.00", LaceID = 9, UserID = 9},
-                new Order {Date = DateTime.Now, Status = OrderStatus.delivered, SubTotal = "£7.50", LaceID = 10, UserID = 10},
-                new Order {Date = DateTime.Now, Status = OrderStatus.received, SubTotal = "£17.50", LaceID = 11, UserID = 11},
-                new Order {Date = DateTime.Now, Status = OrderStatus.delivered, SubTotal = "£25.50", LaceID = 12, UserID = 12},
-                new Order {Date = DateTime.Now, Status = OrderStatus.intransit, SubTotal = "£2.00", LaceID = 13, UserID = 13},
-                new Order {Date = DateTime.Now, Status = OrderStatus.received, SubTotal = "£43.50", LaceID = 14, UserID = 14},
-                new Order {Date = DateTime.Now, Status = OrderStatus.delivered, SubTotal = "£13.20", LaceID = 15, UserID = 15},
-                new Order {Date = DateTime.Now, Status = OrderStatus.intransit, SubTotal = "£11.00", LaceID = 16, UserID = 16},
-                new Order {Date = DateTime.Now, Status = OrderStatus.delivered, SubTotal = "£19.50", LaceID = 17, UserID = 17},
-                new Order {Date = DateTime.Now, Status = OrderStatus.delivered, SubTotal = "£1.50", LaceID = 18, UserID = 18},
-                new Order {Date = DateTime.Now, Status = OrderStatus.delivered, SubTotal = "£5.00", LaceID = 19, UserID = 19},
-                new Order {Date = DateTime.Now, Status = OrderStatus.intransit, SubTotal = "£22.00", LaceID = 20, UserID = 20},
-                new Order {Date = DateTime.Now, Status = OrderStatus.intransit, SubTotal = "£8.00", LaceID = 21, UserID = 21},
-                new Order {Date = DateTime.Now, Status = OrderStatus.received, SubTotal = "£22.10", LaceID = 22, UserID = 22},
-                new Order {Date = DateTime.Now, Status = OrderStatus.intransit, SubTotal = "£10.00", LaceID = 23, UserID = 23}
+                new Order {DateOrdered = DateTime.Now, Status = OrderStatus.received, SubTotal = 2.50m, UserID = 1},
+                new Order {DateOrdered = DateTime.Now, Status = OrderStatus.delivered, SubTotal = 5.00m, UserID = 2},
+                new Order {DateOrdered = DateTime.Now, Status = OrderStatus.intransit, SubTotal = 7.50m, UserID = 3},
+                new Order {DateOrdered = DateTime.Now, Status = OrderStatus.delivered, SubTotal = 25.00m, UserID = 4},
+                new Order {DateOrdered = DateTime.Now, Status = OrderStatus.received, SubTotal = 17.00m, UserID = 5},
+                new Order {DateOrdered = DateTime.Now, Status = OrderStatus.intransit, SubTotal = 4.50m, UserID = 6},
+                new Order {DateOrdered = DateTime.Now, Status = OrderStatus.received, SubTotal = 5.50m, UserID = 7},
+                new Order {DateOrdered = DateTime.Now, Status = OrderStatus.intransit, SubTotal = 12.50m, UserID = 8},
+                new Order {DateOrdered = DateTime.Now, Status = OrderStatus.intransit, SubTotal = 9.00m, UserID = 9},
+                new Order {DateOrdered = DateTime.Now, Status = OrderStatus.delivered, SubTotal = 7.50m, UserID = 10},
+                new Order {DateOrdered = DateTime.Now, Status = OrderStatus.received, SubTotal = 17.50m, UserID = 11},
+                new Order {DateOrdered = DateTime.Now, Status = OrderStatus.delivered, SubTotal = 25.50m, UserID = 12},
+                new Order {DateOrdered = DateTime.Now, Status = OrderStatus.intransit, SubTotal = 2.00m, UserID = 13},
+                new Order {DateOrdered = DateTime.Now, Status = OrderStatus.received, SubTotal = 43.50m, UserID = 14},
+                new Order {DateOrdered = DateTime.Now, Status = OrderStatus.delivered, SubTotal = 13.20m, UserID = 15},
+                new Order {DateOrdered = DateTime.Now, Status = OrderStatus.intransit, SubTotal = 11.00m, UserID = 16},
+                new Order {DateOrdered = DateTime.Now, Status = OrderStatus.delivered, SubTotal = 19.50m, UserID = 17},
+                new Order {DateOrdered = DateTime.Now, Status = OrderStatus.delivered, SubTotal = 1.50m, UserID = 18},
+                new Order {DateOrdered = DateTime.Now, Status = OrderStatus.delivered, SubTotal = 5.00m, UserID = 19},
+                new Order {DateOrdered = DateTime.Now, Status = OrderStatus.intransit, SubTotal = 22.00m, UserID = 20},
+                new Order {DateOrdered = DateTime.Now, Status = OrderStatus.intransit, SubTotal = 8.00m, UserID = 21},
+                new Order {DateOrdered = DateTime.Now, Status = OrderStatus.received, SubTotal = 22.10m, UserID = 22},
+                new Order {DateOrdered = DateTime.Now, Status = OrderStatus.intransit, SubTotal = 10.00m, UserID = 23}
             };
 
             foreach (Order a in orders)
@@ -232,13 +233,13 @@ namespace AgletCoreMVC.Data
                 new Lace {Colour = Colours.Cyan, Brand = Brands.Puma, Length = 15, ImageURL = "Wowcher123.co.uk", Description = "On the older range of laces but the quality still holds up today"},
                 new Lace {Colour = Colours.Red, Brand = Brands.Champion, Length = 11, ImageURL = "DatImage.co.uk"},
                 new Lace {Colour = Colours.Green, Print = "Who Dat Boi", Brand = Brands.Ellesse, Length = 22, ImageURL = "GOLF.co.uk", Description = "Who him is?"},
-                new Lace {Colour = Colours.Pink, Print = "Happyu Birthday George", Brand = Brands.Adidas, Length = 10, ImageURL = "pictures.com"},
+                new Lace {Colour = Colours.Pink, Print = "Happy Birthday", Brand = Brands.Adidas, Length = 10, ImageURL = "pictures.com"},
                 new Lace {Colour = Colours.Blue, Brand = Brands.Champion, Length = 16, ImageURL = "greenlace.com", Description = "A new and exciting pink lace"},
                 new Lace {Colour = Colours.Purple, Print = "Hello", Brand = Brands.Kappa, Length = 14, ImageURL = "Wow.com",},
                 new Lace {Colour = Colours.White, Brand = Brands.Reebok, Length = 10, ImageURL = "Image7.co.uk", Description = "A Classic!!!"},
                 new Lace {Colour = Colours.Grey, Brand = Brands.Fila, Length = 11, ImageURL = "Imagine.co.uk"},
                 new Lace {Colour = Colours.Pink, Print = "Kick it", Brand = Brands.Nike, Length = 14, ImageURL = "Images123456787919.co.uk"},
-                new Lace {Colour = Colours.Yellow, Print = "Congrats Johnyboy", Brand = Brands.Jordan, Length = 5, ImageURL = "TimesNewRoman.co.uk", Description = "A good lace to gift to someone special"},
+                new Lace {Colour = Colours.Yellow, Print = "Congrats Johny", Brand = Brands.Jordan, Length = 5, ImageURL = "TimesNewRoman.co.uk", Description = "A good lace to gift to someone special"},
                 new Lace {Colour = Colours.Blue, Brand = Brands.Puma, Length = 17, ImageURL = "heyheyhey.co.uk"},
                 new Lace {Colour = Colours.Pink, Brand = Brands.Reebok, Length = 11, ImageURL = "3guys.co.uk"},
                 new Lace {Colour = Colours.Cyan, Print = "Happy Mothers Day", Brand = Brands.Adidas, Length = 15, ImageURL = "Mother.co.uk", Description = "For that special day"},
@@ -254,27 +255,24 @@ namespace AgletCoreMVC.Data
         }
 
 
-        /* private static void InitialiseItem(ApplicationDbContext context)
-         {
-             if (context.Item.Any())
-             {
-                 return;
-             }
+        private static void InitialiseItems(ApplicationDbContext context)
+        {
+            if (context.Item.Any())
+            {
+                return;
+            }
 
-             var items = new Item[]
-             {
+            var items = new Item[]
+            {
+            };
 
+            foreach (Item a in items)
+            {
+                context.Item.Add(a);
+            }
 
-
-             };
-
-             foreach (Item a in items)
-             {
-                 context.Item.Add(a);
-             }
-
-             context.SaveChanges();
-         }*/
+            context.SaveChanges();
+        }
 
         private static void InitialiseContacts(ApplicationDbContext context)
         {
@@ -295,7 +293,7 @@ namespace AgletCoreMVC.Data
                 new Contact {Email = "Customer4@gmail.com", Phone = "07811270000"},
                 new Contact {Email = "Customer5@gmail.com", Phone = "07867290000"},
                 new Contact {Email = "Customer6@gmail.com", Phone = "07896740000"},
-                new Contact {Email = "Customer7@gmail.com", Phone = "07049519971 "},
+                new Contact {Email = "Customer7@gmail.com", Phone = "07049519971"},
                 new Contact {Email = "Customer8@gmail.com", Phone = "07918103448"},
                 new Contact {Email = "Customer9@gmail.com", Phone = "07720524101"},
                 new Contact {Email = "Customer11@gmail.com", Phone = "07030216070"},

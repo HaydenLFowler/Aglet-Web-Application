@@ -16,11 +16,11 @@ public class Item {
     [Range(1,99)]
 	public int Quantity {get; set;}
 
-    // curren y annotations
+    // current annotations
 
     [Required]
     [Range(0, 9999.99)]
-    public string Price {get; set;}
+    public decimal Price {get; set;}
 
     public int LaceID { get; set; }
 
