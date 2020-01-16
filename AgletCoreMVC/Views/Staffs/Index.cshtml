@@ -1,15 +1,16 @@
 ﻿@model IEnumerable<AgletCoreMVC.Models.Staff>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Staff List";
 }
 
-<h2>Index</h2>
-
+    <header class="jumbotron">
+        <h2>List of Staff</h2>
+    </header>
 <p>
-    <a asp-action="Create">Create New</a>
+    <a class="btn btn-success" asp-action="Create">Create New </a>
 </p>
-<table class="table">
+<table class="table table-bordered table-hover table-striped">
     <thead>
         <tr>
             <th>
@@ -25,23 +26,24 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Department)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Salary)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.JobTitle)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.StaffID">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.StaffID">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.StaffID">Delete</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Department)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Salary)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.JobTitle)
+                </td>
+                <td>
+                    <a class="btn btn-success" asp-action="Edit" asp-route-id="@item.StaffID">Edit</a>
+                    <a class="btn btn-warning" asp-action="Details" asp-route-id="@item.StaffID">Details</a>
+                    <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.StaffID">Delete</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>
