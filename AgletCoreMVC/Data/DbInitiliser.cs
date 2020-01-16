@@ -183,7 +183,27 @@ namespace AgletCoreMVC.Data
             {
                 new Order {Date = DateTime.Now, Status = OrderStatus.received, SubTotal = "£2.50"},
                 new Order {Date = DateTime.Now, Status = OrderStatus.delivered, SubTotal = "£5.00"},
-                new Order {Date = DateTime.Now, Status = OrderStatus.intransit, SubTotal = "£7.50"}
+                new Order {Date = DateTime.Now, Status = OrderStatus.intransit, SubTotal = "£7.50"},
+                new Order {Date = DateTime.Now, Status = OrderStatus.delivered, SubTotal = "£25.00"},
+                new Order {Date = DateTime.Now, Status = OrderStatus.received, SubTotal = "£17.00"},
+                new Order {Date = DateTime.Now, Status = OrderStatus.intransit, SubTotal = "£4.50"},
+                new Order {Date = DateTime.Now, Status = OrderStatus.received, SubTotal = "£5.50"},
+                new Order {Date = DateTime.Now, Status = OrderStatus.intransit, SubTotal = "£12.50"},
+                new Order {Date = DateTime.Now, Status = OrderStatus.intransit, SubTotal = "£9.00"},
+                new Order {Date = DateTime.Now, Status = OrderStatus.delivered, SubTotal = "£7.50"},
+                new Order {Date = DateTime.Now, Status = OrderStatus.received, SubTotal = "£17.50"},
+                new Order {Date = DateTime.Now, Status = OrderStatus.delivered, SubTotal = "£25.50"},
+                new Order {Date = DateTime.Now, Status = OrderStatus.intransit, SubTotal = "£2.00"},
+                new Order {Date = DateTime.Now, Status = OrderStatus.received, SubTotal = "£43.50"},
+                new Order {Date = DateTime.Now, Status = OrderStatus.delivered, SubTotal = "£13.20"},
+                new Order {Date = DateTime.Now, Status = OrderStatus.intransit, SubTotal = "£11.00"},
+                new Order {Date = DateTime.Now, Status = OrderStatus.delivered, SubTotal = "£19.50"},
+                new Order {Date = DateTime.Now, Status = OrderStatus.delivered, SubTotal = "£1.50"},
+                new Order {Date = DateTime.Now, Status = OrderStatus.delivered, SubTotal = "£5.00"},
+                new Order {Date = DateTime.Now, Status = OrderStatus.intransit, SubTotal = "£22.00"},
+                new Order {Date = DateTime.Now, Status = OrderStatus.intransit, SubTotal = "£8.00"},
+                new Order {Date = DateTime.Now, Status = OrderStatus.received, SubTotal = "£22.10"},
+                new Order {Date = DateTime.Now, Status = OrderStatus.intransit, SubTotal = "£10.00"}
             };
 
             foreach (Order a in orders)
@@ -205,7 +225,24 @@ namespace AgletCoreMVC.Data
             {
                 new Lace {Colour = Colours.Black, Print = "Blue Lace", Brand = Brands.Nike, Length = 10, ImageURL = "Image.com", Description = "One of the best"},
                 new Lace {Colour = Colours.Green, Brand = Brands.UnderArmour, Length = 20, ImageURL = "Image2.com"},
-                new Lace {Colour = Colours.Pink, Brand = Brands.Adidas, Length = 10, ImageURL = "Image3.co.uk", Description = "A great lace"}
+                new Lace {Colour = Colours.Pink, Brand = Brands.Fila, Length = 10, ImageURL = "Image3.co.uk", Description = "A great lace"},
+                new Lace {Colour = Colours.Yellow, Brand = Brands.Adidas, Length = 15, ImageURL = "Adidas15Lace.co.uk", Description = "One of a kind"},
+                new Lace {Colour = Colours.Green, Brand = Brands.UnderArmour, Length = 19, ImageURL = "thatUnderArmour.co.uk", Description = "Simply the best"},
+                new Lace {Colour = Colours.Black, Brand = Brands.Lacoste, Length = 12, ImageURL = "DamnDaniel.co.uk", Description = "Sporty and colourful"},
+                new Lace {Colour = Colours.Cyan, Brand = Brands.Puma, Length = 15.5, ImageURL = "Wowcher123.co.uk", Description = "On the older range of laces but the quality still holds up today"},
+                new Lace {Colour = Colours.Red, Brand = Brands.Champion, Length = 11, ImageURL = "DatImage.co.uk"},
+                new Lace {Colour = Colours.Green, Print = "Who Dat Boi", Brand = Brands.Ellese, Length = 22, ImageURL = "GOLF.co.uk", Description = "Who him is?"},
+                new Lace {Colour = Colours.Pink, Print = "Happyu Birthday George", Brand = Brands.Adidas, Length = 10, ImageURL = "pictures.com"},
+                new Lace {Colour = Colours.Blue, Brand = Brands.Champion, Length = 16, ImageURL = "greenlace.com", Description = "A new and exciting pink lace"},
+                new Lace {Colour = Colours.Purple, Print = "Hello", Brand = Brands.Kappa, Length = 14, ImageURL = "Wow.com",},
+                new Lace {Colour = Colours.White, Brand = Brands.Reebok, Length = 10, ImageURL = "Image7.co.uk", Description = "A Classic!!!"},
+                new Lace {Colour = Colours.Grey, Brand = Brands.Fila, Length = 11, ImageURL = "Imagine.co.uk"},
+                new Lace {Colour = Colours.Pink, Print = "Kick it", Brand = Brands.Nike, Length = 14, ImageURL = "Images123456787919.co.uk"},
+                new Lace {Colour = Colours.Yellow, Print = "Congrats Johnyboy", Brand = Brands.Jordan, Length = 5, ImageURL = "TimesNewRoman.co.uk", Description = "A good lace to gift to someone special"},
+                new Lace {Colour = Colours.Blue, Brand = Brands.Puma, Length = 17, ImageURL = "heyheyhey.co.uk"},
+                new Lace {Colour = Colours.Pink, Brand = Brands.Reebok, Length = 11, ImageURL = "3guys.co.uk"},
+                new Lace {Colour = Colours.Cyan, Print = "Happy Mothers Day", Brand = Brands.Adidas, Length = 15, ImageURL = "Mother.co.uk", Description = "For that special day"},
+                new Lace {Colour = Colours.Yellow, Brand = Brands.Fila, Length = 10, ImageURL = "Image10.co.uk"}
             };
 
             foreach (Lace a in laces)

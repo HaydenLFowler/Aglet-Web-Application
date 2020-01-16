@@ -53,7 +53,15 @@ namespace AgletCoreMVC.Models
     {
         Adidas,
         Nike,
-        UnderArmour
+        UnderArmour,
+        Puma,
+        Fila,
+        Champion,
+        Ellesse,
+        Jordan,
+        Kappa,
+        Lacoste,
+        Reebok
     }
 
     
