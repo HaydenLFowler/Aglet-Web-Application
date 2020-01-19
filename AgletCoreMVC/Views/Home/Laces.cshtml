@@ -3,63 +3,82 @@
 @{
     ViewData["Title"] = "Laces";
 }
+    <div class="jumbotron">
+        <h2>Laces</h2>
+    </div>
 
-<h2>Laces</h2>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Colour)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Print)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Brand)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Length)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ImageURL)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Description)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Colour)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Print)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Brand)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Length)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ImageURL)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Description)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.LaceID">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.LaceID">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.LaceID">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+
+
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100">
+                    <p> @Html.DisplayFor(model => item.ImageURL) </p>
+                    <div class="card-body">
+                        <h4 class="card-title">
+                            @Html.DisplayFor(model => item.Brand)
+                        </h4>
+                        <p class="card-text"> @Html.DisplayFor(model => item.Description) </p>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Colour)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Print)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Brand)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Length)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.ImageURL)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Description)
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Colour)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Print)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Brand)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Length)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ImageURL)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Description)
+                        </td>
+                        <td>
+                            <a asp-action="Edit" asp-route-id="@item.LaceID">Edit</a> |
+                            <a asp-action="Details" asp-route-id="@item.LaceID">Details</a> |
+                            <a asp-action="Delete" asp-route-id="@item.LaceID">Delete</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>

@@ -240,7 +240,7 @@ namespace AgletCoreMVC.Data
                 new Lace {Colour = Colours.Pink, Print = "Kick it", Brand = Brands.Nike, Length = 14, ImageURL = "Images123456787919.co.uk"},
                 new Lace {Colour = Colours.Yellow, Print = "Congrats Johny", Brand = Brands.Jordan, Length = 5, ImageURL = "TimesNewRoman.co.uk", Description = "A good lace to gift to someone special"},
                 new Lace {Colour = Colours.Blue, Brand = Brands.Puma, Length = 17, ImageURL = "heyheyhey.co.uk"},
-                new Lace {Colour = Colours.Pink, Brand = Brands.Reebok, Length = 11, ImageURL = "3guys.co.uk"},
+                new Lace {Colour = Colours.Pink, Brand = Brands.Reebok, Length = 11, ImageURL = "BlackLace.jpg"},
                 new Lace {Colour = Colours.Cyan, Print = "Happy Mothers Day", Brand = Brands.Adidas, Length = 15, ImageURL = "Mother.co.uk", Description = "For that special day"},
                 new Lace {Colour = Colours.Yellow, Brand = Brands.Fila, Length = 10, ImageURL = "Image10.co.uk"}
             };
