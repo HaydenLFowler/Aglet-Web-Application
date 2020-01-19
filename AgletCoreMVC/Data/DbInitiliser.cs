@@ -224,26 +224,26 @@ namespace AgletCoreMVC.Data
             }
             var laces = new Lace[]
             {
-                new Lace {Colour = Colours.Black, Print = "Blue Lace", Brand = Brands.Nike, Length = 10, ImageURL = "Green.jpg", Description = "One of the best"},
+                new Lace {Colour = Colours.Black, Print = "Blue Lace", Brand = Brands.Nike, Length = 10, ImageURL = "Redshoe.jpg", Description = "One of the best"},
                 new Lace {Colour = Colours.Green, Brand = Brands.UnderArmour, Length = 20, ImageURL = "Ben10.jpg"},
-                new Lace {Colour = Colours.Pink, Brand = Brands.Fila, Length = 10, ImageURL = "RedShoe.jpg", Description = "A great lace"},
-                new Lace {Colour = Colours.Yellow, Brand = Brands.Adidas, Length = 15, ImageURL = "Adidas15Lace.co.uk", Description = "One of a kind"},
-                new Lace {Colour = Colours.Green, Brand = Brands.UnderArmour, Length = 19, ImageURL = "thatUnderArmour.co.uk", Description = "Simply the best"},
-                new Lace {Colour = Colours.Black, Brand = Brands.Lacoste, Length = 12, ImageURL = "DamnDaniel.co.uk", Description = "Sporty and colourful"},
-                new Lace {Colour = Colours.Cyan, Brand = Brands.Puma, Length = 15, ImageURL = "Wowcher123.co.uk", Description = "On the older range of laces but the quality still holds up today"},
-                new Lace {Colour = Colours.Red, Brand = Brands.Champion, Length = 11, ImageURL = "DatImage.co.uk"},
-                new Lace {Colour = Colours.Green, Print = "Who Dat Boi", Brand = Brands.Ellesse, Length = 22, ImageURL = "GOLF.co.uk", Description = "Who him is?"},
-                new Lace {Colour = Colours.Pink, Print = "Happy Birthday", Brand = Brands.Adidas, Length = 10, ImageURL = "pictures.com"},
-                new Lace {Colour = Colours.Blue, Brand = Brands.Champion, Length = 16, ImageURL = "greenlace.com", Description = "A new and exciting pink lace"},
-                new Lace {Colour = Colours.Purple, Print = "Hello", Brand = Brands.Kappa, Length = 14, ImageURL = "Wow.com",},
-                new Lace {Colour = Colours.White, Brand = Brands.Reebok, Length = 10, ImageURL = "Image7.co.uk", Description = "A Classic!!!"},
-                new Lace {Colour = Colours.Grey, Brand = Brands.Fila, Length = 11, ImageURL = "Imagine.co.uk"},
-                new Lace {Colour = Colours.Pink, Print = "Kick it", Brand = Brands.Nike, Length = 14, ImageURL = "Images123456787919.co.uk"},
-                new Lace {Colour = Colours.Yellow, Print = "Congrats Johny", Brand = Brands.Jordan, Length = 5, ImageURL = "TimesNewRoman.co.uk", Description = "A good lace to gift to someone special"},
-                new Lace {Colour = Colours.Blue, Brand = Brands.Puma, Length = 17, ImageURL = "heyheyhey.co.uk"},
+                new Lace {Colour = Colours.Pink, Brand = Brands.Fila, Length = 10, ImageURL = "RedAgain.jpg", Description = "A great lace"},
+                new Lace {Colour = Colours.Yellow, Brand = Brands.Adidas, Length = 15, ImageURL = "Print.jpg", Description = "One of a kind"},
+                new Lace {Colour = Colours.Green, Brand = Brands.UnderArmour, Length = 19, ImageURL = "Metal.jpg", Description = "Simply the best"},
+                new Lace {Colour = Colours.Black, Brand = Brands.Lacoste, Length = 12, ImageURL = "LovelyLaces.jpg", Description = "Sporty and colourful"},
+                new Lace {Colour = Colours.Cyan, Brand = Brands.Puma, Length = 15, ImageURL = "Hipster.jpg", Description = "On the older range of laces but the quality still holds up today"},
+                new Lace {Colour = Colours.Red, Brand = Brands.Champion, Length = 11, ImageURL = "GreyShoe.jpg"},
+                new Lace {Colour = Colours.Green, Print = "Who Dat Boi", Brand = Brands.Ellesse, Length = 22, ImageURL = "greenish.jpg", Description = "Who him is?"},
+                new Lace {Colour = Colours.Pink, Print = "Happy Birthday", Brand = Brands.Adidas, Length = 10, ImageURL = "GenericLace.jpg"},
+                new Lace {Colour = Colours.Blue, Brand = Brands.Champion, Length = 16, ImageURL = "DisShoe.jpg", Description = "A new and exciting pink lace"},
+                new Lace {Colour = Colours.Purple, Print = "Hello", Brand = Brands.Kappa, Length = 14, ImageURL = "DatShoe.jpg",},
+                new Lace {Colour = Colours.White, Brand = Brands.Reebok, Length = 10, ImageURL = "darkgreenish.jpg", Description = "A Classic!!!"},
+                new Lace {Colour = Colours.Grey, Brand = Brands.Fila, Length = 11, ImageURL = "DarkColours.jpg"},
+                new Lace {Colour = Colours.Pink, Print = "Kick it", Brand = Brands.Nike, Length = 14, ImageURL = "BlueShoe.jpg"},
+                new Lace {Colour = Colours.Yellow, Print = "Congrats Johny", Brand = Brands.Jordan, Length = 5, ImageURL = "Bluely.jpg", Description = "A good lace to gift to someone special"},
+                new Lace {Colour = Colours.Blue, Brand = Brands.Puma, Length = 17, ImageURL = "AllShoes.jpg"},
                 new Lace {Colour = Colours.Pink, Brand = Brands.Reebok, Length = 11, ImageURL = "BlackLace.jpg"},
                 new Lace {Colour = Colours.Cyan, Print = "Happy Mothers Day", Brand = Brands.Adidas, Length = 15, ImageURL = "Mother.co.uk", Description = "For that special day"},
-                new Lace {Colour = Colours.Yellow, Brand = Brands.Fila, Length = 10, ImageURL = "Image10.co.uk"}
+                new Lace {Colour = Colours.Yellow, Brand = Brands.Fila, Length = 10, ImageURL = "Green.jpg"}
             };
 
             foreach (Lace a in laces)

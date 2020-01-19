@@ -14,11 +14,9 @@
         @foreach (var item in Model)
         {
             <div class="col-lg-4 col-md-6 mb-4">
-                <div class="card h-100">
-                    <p> 
+                <div class="card h-100">                    
                         <img src="~/images/@item.ImageURL" />
-                        @*@Html.DisplayFor(model => item.ImageURL)*@ 
-                    </p>
+                        @*@Html.DisplayFor(model => item.ImageURL)*@                     
                     <div class="card-body">
                         <h4 class="card-title">
                             @Html.DisplayFor(model => item.Brand)
