@@ -6,6 +6,53 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="wwwroot\images\Aglets.jpg" />
+    <Content Remove="wwwroot\images\AllShoes.jpg" />
+    <Content Remove="wwwroot\images\ben10.jpg" />
+    <Content Remove="wwwroot\images\BlackLace.jpg" />
+    <Content Remove="wwwroot\images\BlueLaces.jpg" />
+    <Content Remove="wwwroot\images\Bluely.jpg" />
+    <Content Remove="wwwroot\images\BlueShoe.jpg" />
+    <Content Remove="wwwroot\images\DarkColours.jpg" />
+    <Content Remove="wwwroot\images\darkgreenish.jpg" />
+    <Content Remove="wwwroot\images\DatShoe.jpg" />
+    <Content Remove="wwwroot\images\DisShoe.jpg" />
+    <Content Remove="wwwroot\images\GenericLace.jpg" />
+    <Content Remove="wwwroot\images\greenish.jpg" />
+    <Content Remove="wwwroot\images\GreyShoe.jpg" />
+    <Content Remove="wwwroot\images\Hipster.jpg" />
+    <Content Remove="wwwroot\images\LovelyLaces.jpg" />
+    <Content Remove="wwwroot\images\Metal.jpg" />
+    <Content Remove="wwwroot\images\Print.jpg" />
+    <Content Remove="wwwroot\images\RedAgain.jpg" />
+    <Content Remove="wwwroot\images\RedShoe.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\images\Aglets.jpg" />
+    <None Include="wwwroot\images\AllShoes.jpg" />
+    <None Include="wwwroot\images\ben10.jpg" />
+    <None Include="wwwroot\images\BlackLace.jpg" />
+    <None Include="wwwroot\images\BlueLaces.jpg" />
+    <None Include="wwwroot\images\Bluely.jpg" />
+    <None Include="wwwroot\images\BlueShoe.jpg" />
+    <None Include="wwwroot\images\DarkColours.jpg" />
+    <None Include="wwwroot\images\darkgreenish.jpg" />
+    <None Include="wwwroot\images\DatShoe.jpg" />
+    <None Include="wwwroot\images\DisShoe.jpg" />
+    <None Include="wwwroot\images\GenericLace.jpg" />
+    <None Include="wwwroot\images\greenish.jpg" />
+    <None Include="wwwroot\images\GreyShoe.jpg" />
+    <None Include="wwwroot\images\Hipster.jpg" />
+    <None Include="wwwroot\images\LovelyLaces.jpg" />
+    <None Include="wwwroot\images\Metal.jpg" />
+    <None Include="wwwroot\images\Print.jpg" />
+    <None Include="wwwroot\images\RedAgain.jpg" />
+    <None Include="wwwroot\images\RedShoe.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DocumentFormat.OpenXml" Version="2.10.0" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.10" />

@@ -1,4 +1,5 @@
 ﻿using AgletCoreMVC.Models;
+using DocumentFormat.OpenXml.Drawing;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -223,9 +224,9 @@ namespace AgletCoreMVC.Data
             }
             var laces = new Lace[]
             {
-                new Lace {Colour = Colours.Black, Print = "Blue Lace", Brand = Brands.Nike, Length = 10, ImageURL = "Image.com", Description = "One of the best"},
-                new Lace {Colour = Colours.Green, Brand = Brands.UnderArmour, Length = 20, ImageURL = "Image2.com"},
-                new Lace {Colour = Colours.Pink, Brand = Brands.Fila, Length = 10, ImageURL = "Image3.co.uk", Description = "A great lace"},
+                new Lace {Colour = Colours.Black, Print = "Blue Lace", Brand = Brands.Nike, Length = 10, ImageURL = "Green.jpg", Description = "One of the best"},
+                new Lace {Colour = Colours.Green, Brand = Brands.UnderArmour, Length = 20, ImageURL = "Ben10.jpg"},
+                new Lace {Colour = Colours.Pink, Brand = Brands.Fila, Length = 10, ImageURL = "RedShoe.jpg", Description = "A great lace"},
                 new Lace {Colour = Colours.Yellow, Brand = Brands.Adidas, Length = 15, ImageURL = "Adidas15Lace.co.uk", Description = "One of a kind"},
                 new Lace {Colour = Colours.Green, Brand = Brands.UnderArmour, Length = 19, ImageURL = "thatUnderArmour.co.uk", Description = "Simply the best"},
                 new Lace {Colour = Colours.Black, Brand = Brands.Lacoste, Length = 12, ImageURL = "DamnDaniel.co.uk", Description = "Sporty and colourful"},
