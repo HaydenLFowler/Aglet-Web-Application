@@ -1,0 +1,58 @@
+﻿@model IEnumerable<AgletCoreMVC.Models.Order>
+
+@{
+    ViewData["Title"] = "List of Orders";
+}
+
+<header class="jumbotron">
+    <h2>
+        List of Orders
+    </h2>
+</header>
+
+<p>
+    <a class="btn btn-success" asp-action="Create">Create New Order</a>
+</p>
+<table class="table">
+    <thead>
+        <tr class="info">
+            <th>
+                @Html.DisplayNameFor(model => model.DateOrdered)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Status)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SubTotal)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.User)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DateOrdered)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Status)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SubTotal)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.User.FirstName)
+                </td>
+                <td>
+                    <a class="btn btn-success" asp-action="Edit" asp-route-id="@item.OrderID">Edit</a>
+                    <a class="btn btn-warning" asp-action="Details" asp-route-id="@item.OrderID">Details</a>
+                    <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.OrderID">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

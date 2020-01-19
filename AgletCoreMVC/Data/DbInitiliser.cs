@@ -12,13 +12,12 @@ namespace AgletCoreMVC.Data
         {
             InitialiseAddresses(context);
             InitialisePaymentCards(context);
-
             InitialiseContacts(context);
             InitialiseStaff(context);
             InitialiseUsers(context);
             InitialiseLaces(context);
             InitialiseOrders(context);
-            //InitialiseItems(context);
+            InitialiseItems(context);
         }
 
 
@@ -254,7 +253,7 @@ namespace AgletCoreMVC.Data
             context.SaveChanges();
         }
 
-
+        //Seed Data by Hayden
         private static void InitialiseItems(ApplicationDbContext context)
         {
             if (context.Item.Any())
@@ -264,6 +263,28 @@ namespace AgletCoreMVC.Data
 
             var items = new Item[]
             {
+                new Item{Quantity = 3, Price = 20.50m, LaceID = 1, OrderID = 1,},
+                new Item{Quantity = 1, Price = 5m, LaceID = 3, OrderID = 2,},
+                new Item{Quantity = 15, Price = 45.30m, LaceID = 5, OrderID = 3,},
+                new Item{Quantity = 6, Price = 19.00m, LaceID = 2, OrderID = 4,},
+                new Item{Quantity = 8, Price = 33.00m, LaceID = 10, OrderID = 5,},
+                new Item{Quantity = 1, Price = 2.00m, LaceID = 11, OrderID = 6,},
+                new Item{Quantity = 9, Price = 18.00m, LaceID = 6, OrderID = 7,},
+                new Item{Quantity = 20, Price = 55.00m, LaceID = 1, OrderID = 8,},
+                new Item{Quantity = 90, Price = 115.36m, LaceID = 15, OrderID = 9,},
+                new Item{Quantity = 4, Price = 8.25m, LaceID = 20, OrderID = 10,},
+                new Item{Quantity = 6, Price = 11.70m, LaceID = 14, OrderID = 11,},
+                new Item{Quantity = 14, Price = 16.40m, LaceID = 7, OrderID = 12,},
+                new Item{Quantity = 7, Price = 9.25m, LaceID = 4, OrderID = 13,},
+                new Item{Quantity = 10, Price = 31.05m, LaceID = 11, OrderID = 14,},
+                new Item{Quantity = 30, Price = 64.21m, LaceID = 18, OrderID = 15,},
+                new Item{Quantity = 26, Price = 44.00m, LaceID = 13, OrderID = 16,},
+                new Item{Quantity = 8, Price = 24.99m, LaceID = 2, OrderID = 17,},
+                new Item{Quantity = 2, Price = 4.50m, LaceID = 5, OrderID = 18,},
+                new Item{Quantity = 1, Price = 3.60m, LaceID = 19, OrderID = 19,},
+                new Item{Quantity = 5, Price = 8.99m, LaceID = 8, OrderID = 20,},
+
+
             };
 
             foreach (Item a in items)
@@ -287,28 +308,28 @@ namespace AgletCoreMVC.Data
                 new Contact {Email = "TheHumorouscustomer@gmail.com", Phone = "07700 900347"},
                 new Contact {Email = "TheCutcustomer@gmail.com", Phone = "07700 900295"},
                 new Contact {Email = "TheDisgustingcustomer@gmail.com", Phone = "07700 900005"},
-                new Contact {Email = "Customer1@gmail.com", Phone = "07700900485"},
-                new Contact {Email = "Customer2@gmail.com", Phone = "07700900029"},
-                new Contact {Email = "Customer3@gmail.com", Phone = "07700900249"},
-                new Contact {Email = "Customer4@gmail.com", Phone = "07811270000"},
-                new Contact {Email = "Customer5@gmail.com", Phone = "07867290000"},
-                new Contact {Email = "Customer6@gmail.com", Phone = "07896740000"},
-                new Contact {Email = "Customer7@gmail.com", Phone = "07049519971"},
-                new Contact {Email = "Customer8@gmail.com", Phone = "07918103448"},
-                new Contact {Email = "Customer9@gmail.com", Phone = "07720524101"},
-                new Contact {Email = "Customer11@gmail.com", Phone = "07030216070"},
-                new Contact {Email = "Customer12@gmail.com", Phone = "07712129738"},
-                new Contact {Email = "Customer13@gmail.com", Phone = "07001263673"},
-                new Contact {Email = "Customer14@gmail.com", Phone = "07737908103"},
-                new Contact {Email = "Customer15@gmail.com", Phone = "07854418459"},
-                new Contact {Email = "Customer16@gmail.com", Phone = "07886545833"},
-                new Contact {Email = "Customer17@gmail.com", Phone = "07976777169"},
-                new Contact {Email = "Customer18@gmail.com", Phone = "07777409515"},
-                new Contact {Email = "Customer19@gmail.com", Phone = "07975395614"},
-                new Contact {Email = "Customer20@gmail.com", Phone = "07724630714"},
-                new Contact {Email = "Customer21@gmail.com", Phone = "07082724859"},
-                new Contact {Email = "Customer22@gmail.com", Phone = "07906619496"},
-                new Contact {Email = "Customer23@gmail.com", Phone = "07978800056"}
+                new Contact {Email = "gamma@outlook.com", Phone = "07700900485"},
+                new Contact {Email = "sokol@hotmail.com", Phone = "07700900029"},
+                new Contact {Email = "mhouston@live.com", Phone = "07700900249"},
+                new Contact {Email = "jyoliver@gmail.com", Phone = "07811270000"},
+                new Contact {Email = "pfitza@gmail.com", Phone = "07867290000"},
+                new Contact {Email = "andrei@hotmail.com", Phone = "07896740000"},
+                new Contact {Email = "kiddailey@hotmail.com", Phone = "07049519971"},
+                new Contact {Email = "oracle@gmail.com", Phone = "07918103448"},
+                new Contact {Email = "raides@msn.com", Phone = "07720524101"},
+                new Contact {Email = "Jaffe@gmail.com", Phone = "07030216070"},
+                new Contact {Email = "msloan@gmail.com", Phone = "07712129738"},
+                new Contact {Email = "jbearp@outlook.com", Phone = "07001263673"},
+                new Contact {Email = "twoflower@yahoo.com", Phone = "07737908103"},
+                new Contact {Email = "zeller@hotmail.com", Phone = "07854418459"},
+                new Contact {Email = "malin@msn.com", Phone = "07886545833"},
+                new Contact {Email = "dimensio@live.com", Phone = "07976777169"},
+                new Contact {Email = "jusdisgi@hotmail.com", Phone = "07777409515"},
+                new Contact {Email = "pedwards@hotmail.com", Phone = "07975395614"},
+                new Contact {Email = "burns@hotmail.com", Phone = "07724630714"},
+                new Contact {Email = "daveed@outlook.com", Phone = "07082724859"},
+                new Contact {Email = "privcan@live.com", Phone = "07906619496"},
+                new Contact {Email = "camenisch@outlook.com", Phone = "07978800056"}
             };
 
             foreach (Contact a in contacts)
