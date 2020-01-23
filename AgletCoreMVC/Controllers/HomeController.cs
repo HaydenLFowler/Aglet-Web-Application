@@ -31,6 +31,13 @@ namespace AgletCoreMVC.Controllers
             return View(await _context.Lace.ToListAsync());
         }
 
+        public async Task<IActionResult> LaceDetails(int id)
+        {
+            ViewData["Message"] = "Your Laces";
+
+            return View(await _context.Lace.FindAsync(id));
+        }
+
         public IActionResult About()
         {
             ViewData["Message"] = "Your application description page.";
