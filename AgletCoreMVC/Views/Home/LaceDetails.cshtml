@@ -4,58 +4,26 @@
     ViewData["Title"] = "LaceDetails";
 }
 
-<h2>LaceDetails</h2>
 <!-- Conor -->
+<h1 style="text-align:center;">
+    @Html.DisplayFor(model => model.Brand)
+</h1>
 
-<div>
-    <h4>Lace</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.LaceID)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.LaceID)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.Colour)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Colour)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.Print)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Print)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.Brand)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Brand)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.Length)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Length)
-        </dd>
-        <dt>
-            @Html.DisplayFor(model => model.ImageURL)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.ImageURL)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.Description)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Description)
-        </dd>
-    </dl>
-</div>
-<div>
-    @Html.ActionLink("Buy", "Buy", new { id = Model.LaceID }) |
-    <a asp-action="Laces">Back to Laces</a>
+<a asp-action="Laces">Back to Laces</a>
+
+<div class="row" align="center">
+    <div class="col-md-4">
+        <img style="height: 200px" , width="300" src="~/images/@Model.ImageURL" />
+    </div>
+    <div class="col-md-4" style="border:dotted">
+        <h2>Description:</h2>
+        <br />
+        <p><b>Colour: </b> @Html.DisplayFor(model => model.Colour)</p>
+        <p><b>Brand: </b>@Html.DisplayFor(model => model.Brand)</p>
+        <p><b>Print: </b>@Html.DisplayFor(model => model.Print)</p>
+        <p><b>Length: </b>@Html.DisplayFor(model => model.Length)</p>
+        <p><b>Short Description: </b>@Html.DisplayFor(model => model.Description)</p>
+        <br />
+        @Html.ActionLink("Buy Now", "Buy", new { id = Model.LaceID })
+    </div>
 </div>
