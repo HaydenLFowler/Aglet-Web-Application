@@ -31,6 +31,11 @@ namespace AgletCoreMVC.Models
         [DataType(DataType.MultilineText)]
         public string Description { get; set; }
 
+
+        [Required]
+        [Range(0, 9999.99)]
+        public decimal Price { get; set; }
+
         // Navigation
         //public virtual ICollection<Item> Item { get; set; }
     }

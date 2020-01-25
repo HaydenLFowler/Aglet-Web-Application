@@ -20,7 +20,7 @@ public class Item {
 
     [Required]
     [Range(0, 9999.99)]
-    public decimal Price {get; set;}
+    public decimal Total {get; set;}
 
     public int LaceID { get; set; }
 
