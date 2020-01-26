@@ -1,37 +1,39 @@
-﻿@model IList<AgletCoreMVC.Models.Lace>
+﻿@model IEnumerable<AgletCoreMVC.Models.Lace>
 
 @{
     ViewData["Title"] = "Laces";
 }
+<!--Hayden-->
 <br />
 <div class="jumbotron">
 
-    <h2 class="text-primary">Laces</h2>
+    <h1 style="text-align: center">Laces</h1>
 </div>
 
-<div class="row">
-    @for (var i = 0; i < Model.Count; i++)
-    {
-        if (i > 0 && i % 3 == 0)
-        {
-            @:</div><div class="row">
-        }
-        <div class="col-md-4">
-            <img style="height: 200px", width="300" src="~/images/@Model[i].ImageURL" />
+@foreach (var item in Model)
+{
+    
+        <div class="col-md-5" style="border: 5px solid lightgrey; margin: 20px">
             <div>
-                <h3 class="text-capitalize, text-left">
-                    @Model[i].Brand
-                </h3>
-                <h4>
-                    @Model[i].Description
-                    @Model[i].Price
-                </h4>
-                <h6>
-                    <a class=" btn btn-primary" asp-action="LaceDetails" asp-route-id="@Model[i].LaceID">View</a> 
-                </h6>
+                <div class="col-md-6" style="padding: 5px">
+                    <img style="height: 200px" width="200" src="~/images/@item.ImageURL" />
+                </div>
+                <div class="col-md-6">
+                    <h3>
+                        @Html.DisplayFor(modelItem => item.Brand)
+                    </h3>
+                    <h4>
+                        @Html.DisplayFor(modelItem => item.Description)
+                        £@Html.DisplayFor(modelItem => item.Price)
+                    </h4>                 
+                    <h6>
+                        <a class=" btn btn-success" asp-action="LaceDetails" asp-route-id="@item.LaceID">View</a>
+                    </h6>
+                </div>
             </div>
         </div>
-   
-    }
-</div>
+  
+}
+<div class="row">
 
+</div>

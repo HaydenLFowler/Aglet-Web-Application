@@ -3,7 +3,8 @@
 @{
     ViewData["Title"] = "Lace List";
 }
-    <br />
+<!--Hayden-->
+<br />
 <header class="jumbotron">
     <h1 class="text-center">
         List of Laces
@@ -44,34 +45,34 @@
     <tbody>
         @foreach (var item in Model)
         {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Colour)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Print)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Brand)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Length)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ImageURL)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Description)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Price)
-            </td>
-            <td>
-                <a class="btn btn-success" asp-action="Edit" asp-route-id="@item.LaceID">Edit</a>
-                <a class="btn btn-warning" asp-action="Details" asp-route-id="@item.LaceID">Details</a>
-                <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.LaceID">Delete</a>
-            </td>
-        </tr>
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Colour)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Print)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Brand)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Length)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ImageURL)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Price)
+                </td>
+                <td>
+                    <a class="btn btn-success" asp-action="Edit" asp-route-id="@item.LaceID">Edit</a>
+                    <a class="btn btn-warning" asp-action="Details" asp-route-id="@item.LaceID">Details</a>
+                    <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.LaceID">Delete</a>
+                </td>
+            </tr>
         }
     </tbody>
 </table>
