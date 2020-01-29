@@ -303,6 +303,7 @@ namespace AgletCoreMVC.Data
                 return;
             }
 
+            //Seed data by Hayden
             var contacts = new Contact[]
             {
                 new Contact {Email = "TheRightfulcustomer@gmail.com", Phone = "07885979893"},
