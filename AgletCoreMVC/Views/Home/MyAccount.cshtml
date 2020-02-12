@@ -1,0 +1,72 @@
+﻿@model AgletCoreMVC.Models.User
+
+@{
+    ViewData["Title"] = "MyAccount";
+}
+
+<h2>MyAccount</h2>
+
+<div>
+    <h4>User</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.MicrosoftID)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.MicrosoftID)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FirstName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Surname)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Surname)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.IsStaff)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.IsStaff)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.IsCustomer)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.IsCustomer)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Contact)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Contact.Phone)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PaymentCard)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PaymentCard.CardName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Staff)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Staff.StaffID)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Address)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Address.PostCode)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.UserID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
