@@ -29,6 +29,8 @@ namespace AgletCoreMVC.Data
 
         public DbSet<Lace> Lace { get; set; }
 
+        public DbSet<Complaint> Complaints { get; set; }
+
 
     }
 }
